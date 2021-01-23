@@ -1,0 +1,89 @@
+/* .hidden_h {
+    display: none;
+} */
+
+
+
+
+.serv-items {
+    width: 240px;
+    height: 61px;
+    list-style: none;
+    background: #32425C;
+    box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    padding-left: 22px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.serv-items.serv-items-active{
+    color: #32425C;
+    background: #FFFFFF;
+
+}
+
+.services {
+    height: 522px;
+    padding-left: 130px;
+    padding-top: 64px;
+
+}
+
+.services_main {
+    display: flex;
+    position: relative;
+
+}
+
+.services_main ul {
+    padding-left: 0;
+    cursor: pointer;
+}
+
+
+.services_top {
+    width: 394px;
+}
+
+.text_services {
+    width: 305px;
+    height: 30px;
+    margin-left: 80px;
+    font-family: PT Sans;
+    font-size: 13px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+.text_services h3 {
+    font-family: Cuprum;
+    text-transform: uppercase;    
+    font-size: 30px;
+    line-height: 30px;
+    color: #32425C;
+}
+
+.services_img {
+    width: 468px;
+    height: 261px;
+}
+
+.serv_img0 {
+    background-image: url('../img/truck.png'); 
+}
+
+.serv_img1 {
+    background-image: url('../img/garant.png'); 
+}
+
+.serv_img2 {
+    background-image: url('../img/credit.png'); 
+}
