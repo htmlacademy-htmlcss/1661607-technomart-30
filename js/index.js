@@ -36,3 +36,16 @@ services.forEach((serv, i) => {
         servImg.classList.add(srviceImgClases[i]);
     });
 })
+
+
+const writeUs = document.getElementById('write_us');
+const modalCalling = document.querySelector('.modal_calling');
+const closeModalBtn = modalCalling.querySelector('.close_basket')
+
+
+writeUs.addEventListener('click', evt => {
+    evt.preventDefault();
+    modalCalling.parentNode.style.display = 'flex';
+})
+
+closeModalBtn.onclick = () => modalCalling.parentNode.style.display = 'none';

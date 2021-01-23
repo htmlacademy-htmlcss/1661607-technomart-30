@@ -206,7 +206,7 @@
                   <img src="img/map.jpg" alt="map" width="300" height="158" />
                 </a>
             
-            <a href="#">Заблудились? Напишите нам</a>
+            <a href="#" id="write_us" >Заблудились? Напишите нам</a>
         </secnion>
       </div>
     </main>
@@ -274,6 +274,30 @@
     </section>
 
     </footer>
+
+    <secnion class="modal_wrapper">
+      <div class="modal_calling">
+          <h2 class="hidden_h">Отправка письма</h2>
+          <form method="POST" action="#">
+            <div class="calling_inputs">
+              <div class="calling_name">
+                <label for="name">Ваше имя:</label> <br>
+                <input type="text" name="name" id="name" placeholder="Имя Фамилия" required>
+              </div>
+              <div class="calling_email">
+                <label for="email">Ваш e-mail:</label> <br>
+                <input type="email" name="email" id="email" placeholder="e-mail@example.com" required>
+              </div>
+            </div>
+            <div class="calling_letter">
+              <label for="letter">Техт письма:</label> <br>
+              <textarea  rows="5" name="letter" id="letter" placeholder="В свободной форме" required></textarea>
+            </div>
+            <button class="submit">ОТПРАВИТЬ</button>
+            <button class="close_basket" id="buy" type="button">X</button>
+          </form>
+      </div>
+  </secnion>
 
 
     <script src="js/index.js"></script>
