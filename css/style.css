@@ -1,13 +1,14 @@
 /* .hidden_h {
-    display: none;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    width: 0;
+    visibility: hidden;
 } */
-.modal_wrapper {
-    display: none;
-}
 
 .modal_wrapper {
     position:fixed;
-    /* display:flex; */
+    display: none;
     align-items:center;
     justify-content:center;
     top:0px;
