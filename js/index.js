@@ -1,14 +1,14 @@
 const slide = document.querySelector('img.slider');
 const sliderImgSrc = ["img/slider_perforators.jpg", "img/slider_drill.jpg"];
-let slide_id = 0
+let slideId = 0
 
 slide.addEventListener('click', () => {
-  if (slide_id < sliderImgSrc.length - 1) {
-    slide_id++;
+  if (slideId < sliderImgSrc.length - 1) {
+    slideId++;
   } else {
-    slide_id = 0
+    slideId = 0
   };
-  slide.setAttribute('src', sliderImgSrc[slide_id]);
+  slide.setAttribute('src', sliderImgSrc[slideId]);
 })
 
 
