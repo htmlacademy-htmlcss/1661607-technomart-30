@@ -3,39 +3,58 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" href="css/style.css" />
   </head>
+
+  <!-- 
+  1. У Вас не стоит задачи добавлять классы. На данном этапе Ваша задача адекватно разметить страницу.
+  -  классы удалил
+
+  2. https://prnt.sc/xkcw03 ... И то что я Вам отметил, это точно не div. 
+  - поменял
+
+  3. https://prnt.sc/xkcyws - Раньше делали все на div, а теперь на section. Почитайте где логично использовать section. 
+  - убрал section, но логики не понял. В лайве лектор разбил крошечный футер на три секции, и мне это показалось логичным...
+  
+  3.Класс для скрытия лучше использовать общеизвестный класс ...
+  - поменял
+
+  4. Вы где-то прочитали, что Вам нужно стилизовать страницу? 
+  - нет.  В задании написано "не нужно". Понял это как "нет необходимости". Не думал, что "не нужно" === "запрещено".
+    Удалил подключение стилей и скрипта.
+
+  5. Если Вам хватило смелости вставить изображения, то будьте добры проверить этот критерий 
+  - не думал, что для подобного нужна смелость. Ок, буду осторожней.
+    Названия файлов поменял, вставил плэйсхолдеры.
+  
+  P.S. Выполняйте только то, что написано в задании!
+  - а Вы мастер мотивации.
+-->
   <body>
     <header>
       <section>
-        <h2 class="hidden_h">Заказы и поиск</h2>
+        <h2>Заказы и поиск</h2>
         <div>
           <div>Техномарт</div>
           <input type="search" name="search" placeholder="Поиск" />
-          <div>Корзина</div>
-          <div>Закладки</div>
-          <button type="button">Оформить заказ</button>
+          <a href="#">Корзина</a>
+          <a href="#">Закладки</a>
+          <a href="#">Оформить заказ</a>
         </div>
       </section>
       <div>
-        <section>
-          <h2 class="hidden_h">Описание магазина</h2>
-          <p>
-            Интернет-магазин <br />
-            строительных материалов <br />
-            и инструментов для ремонта
-          </p>
-        </section>
-        <section>
-          <h2 class="hidden_h">Контакты</h2>
-          <a href="tel:+78125550555">+7(812)555-0-555</a>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </section>
-        <section>
-          <h2 class="hidden_h">Вход и регистрация</h2>
+        <p>
+          Интернет-магазин <br />
+          строительных материалов <br />
+          и инструментов для ремонта
+        </p>
+        <p>
+          <a href="tel:+78125550555">+7(812)555-0-555</a> <br />
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        </p>
+        <div>
           <a href="#">Войти</a>
           <a href="#">Регистрация</a>
-        </section>
+        </div>
       </div>
       <nav>
         <ul>
@@ -51,9 +70,9 @@
     </header>
 
     <main>
-      <h1 class="hidden_h">Техномарт: главная страница</h1>
+      <h1>Техномарт: главная страница</h1>
       <section>
-        <h2 class="hidden_h">Промо-блок</h2>
+        <h2>Промо-блок</h2>
         <div>
           <h3>Материалы</h3>
           <a href="#">На любой вкус</a>
@@ -66,15 +85,9 @@
           <h3>Техника</h3>
           <a href="#">Для стройки</a>
         </div>
-        <div class="promo_block_item big_all">
-          <div class="promo_block__slider">
-            <img
-              src="img/slider_perforators.jpg"
-              width="620"
-              height="266"
-              alt="perforators"
-              class="slider"
-            />
+        <div>
+          <div>
+            <img src="https://via.placeholder.com/620x266" alt="perforators" />
             <a href="catalog.html">Открыть каталог</a>
           </div>
         </div>
@@ -96,34 +109,46 @@
         <ul>
           <li>
             <a href="#">
-              <img src="img/bfg9000.png" alt="Перфоратор BOSH bfg9000" />
+              <img
+                src="https://via.placeholder.com/127x112"
+                alt="Перфоратор BOSH bfg9000"
+              />
               <h3>Перфоратор BOSH BFG9000</h3>
-              <p class="goods_exprice">35550 P.</p>
-              <p class="goods_price">25550 P.</p>
+              <p>35550 P.</p>
+              <p>25550 P.</p>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/bfg3000.png" alt="Перфоратор BOSH bfg3000" />
+              <img
+                src="https://via.placeholder.com/127x112"
+                alt="Перфоратор BOSH bfg3000"
+              />
               <h3>Перфоратор BOSH BFG3000</h3>
-              <p class="goods_exprice">25550 P.</p>
-              <p class="goods_price">15550 P.</p>
+              <p>25550 P.</p>
+              <p>15550 P.</p>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/bfg6000.png" alt="Перфоратор BOSH bfg6000" />
+              <img
+                src="https://via.placeholder.com/127x112"
+                alt="Перфоратор BOSH bfg6000"
+              />
               <h3>Перфоратор BOSH BFG6000</h3>
-              <p class="goods_exprice">35550 P.</p>
-              <p class="goods_price">25550 P.</p>
+              <p>35550 P.</p>
+              <p>25550 P.</p>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/bfg2000.png" alt="Перфоратор BOSH bfg2000" />
+              <img
+                src="https://via.placeholder.com/127x112"
+                alt="Перфоратор BOSH bfg2000"
+              />
               <h3>Перфоратор BOSH BFG2000</h3>
-              <p class="goods_exprice">22550 P.</p>
-              <p class="goods_price">12550 P.</p>
+              <p>22550 P.</p>
+              <p>12550 P.</p>
             </a>
           </li>
         </ul>
@@ -134,11 +159,11 @@
           <h2>Популярные производители</h2>
           <a href="#">Все производители</a>
         </header>
-        <ul class="list_firms">
+        <ul>
           <li>
             <a href="#"
               ><img
-                src="img/bosh_logo_big.png"
+                src="https://via.placeholder.com/220x145"
                 alt="bosh"
                 width="220"
                 height="145"
@@ -147,7 +172,7 @@
           <li>
             <a href="#"
               ><img
-                src="img/makita_logo_big.png"
+                src="https://via.placeholder.com/220x145"
                 alt="makita"
                 width="220"
                 height="145"
@@ -156,7 +181,7 @@
           <li>
             <a href="#"
               ><img
-                src="img/DeWalt_logo_big.png"
+                src="https://via.placeholder.com/220x145"
                 alt="dewalt"
                 width="220"
                 height="145"
@@ -165,7 +190,7 @@
           <li>
             <a href="#"
               ><img
-                src="img/interskol_logo_big.png"
+                src="https://via.placeholder.com/220x145"
                 alt="interskol"
                 width="220"
                 height="145"
@@ -174,7 +199,7 @@
           <li>
             <a href="#"
               ><img
-                src="img/hitachi_logo_big.png"
+                src="https://via.placeholder.com/220x145"
                 alt="hitachi"
                 width="220"
                 height="145"
@@ -182,13 +207,17 @@
           </li>
           <li>
             <a href="#"
-              ><img src="img/LG_logo_big.png" alt="lg" width="220" height="145"
+              ><img
+                src="https://via.placeholder.com/220x145"
+                alt="lg"
+                width="220"
+                height="145"
             /></a>
           </li>
           <li>
             <a href="#"
               ><img
-                src="img/AEG_logo_big.png"
+                src="https://via.placeholder.com/220x145"
                 alt="aeg"
                 width="220"
                 height="145"
@@ -197,7 +226,7 @@
           <li>
             <a href="#"
               ><img
-                src="img/metado_logo_big.png"
+                src="https://via.placeholder.com/220x145"
                 alt="metabo"
                 width="220"
                 height="145"
@@ -206,22 +235,22 @@
         </ul>
       </section>
 
-      <section class="services">
-        <div class="services_top">
+      <section>
+        <div>
           <h2>Сервисы</h2>
           <p>
             Хороший интернет-магазин отличается от плохого не только ценами! Мы
             стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
         </div>
-        <div class="services_main">
+        <div>
           <ul>
-            <li class="serv-items serv-items-active">Доставка</li>
-            <li class="serv-items">Гарантия</li>
-            <li class="serv-items">Кредит</li>
+            <li>Доставка</li>
+            <li>Гарантия</li>
+            <li>Кредит</li>
           </ul>
 
-          <div class="text_services">
+          <div>
             <h3>Доставка</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо <br />
@@ -230,7 +259,7 @@
               поднимая его на ваш этаж!
             </p>
           </div>
-          <div class="services_img serv_img0"></div>
+          <div>тут в css должен быть прописан bg-image</div>
         </div>
       </section>
 
@@ -259,11 +288,13 @@
             Вы можете забрать товар сами, <br />
             заехав в наш офис:
           </p>
-          <a
-            target="_blank"
-            href="https://yandex.ru/maps/?text=Россия%2C%20Санкт-Петербург%2C%20Большая%20Конюшенная%20улица%2C%2019%2F8&sll=30.323118,59.938635&source=wizgeo&utm_source=serp&l=map&utm_medium=maps-desktop"
-          >
-            <img src="img/map.jpg" alt="map" width="300" height="158" />
+          <a target="_blank" href="#">
+            <img
+              src="https://via.placeholder.com/300x158"
+              alt="map"
+              width="300"
+              height="158"
+            />
           </a>
 
           <a href="#" id="write_us">Заблудились? Напишите нам</a>
@@ -273,7 +304,7 @@
 
     <footer>
       <section>
-        <h2 class="hidden_h">Ссылки, контакты</h2>
+        <h2>Ссылки, контакты</h2>
         <div>
           <div>Техномарт</div>
           <ul>
@@ -286,7 +317,7 @@
         </div>
         <div>
           <section>
-            <h3 class="hidden_h">Контакты</h3>
+            <h3>Контакты</h3>
             <a href="tel:+78125550555">+7(812)555-0-555</a>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </section>
@@ -299,7 +330,7 @@
         </div>
       </section>
       <section>
-        <h2 class="hidden_h">Копирайт, контакты</h2>
+        <h2>Копирайт, контакты</h2>
         <p>
           © 2010–2019 Компания «Техномарт» <br />
           Все права защищены
@@ -328,12 +359,12 @@
       </section>
     </footer>
 
-    <section class="modal_wrapper">
-      <div class="modal_calling">
-        <h2 class="hidden_h">Отправка письма</h2>
+    <section>
+      <div>
+        <h2>Отправка письма</h2>
         <form method="POST" action="#">
-          <div class="calling_inputs">
-            <div class="calling_name">
+          <div>
+            <div>
               <label for="name">Ваше имя:</label> <br />
               <input
                 type="text"
@@ -343,7 +374,7 @@
                 required
               />
             </div>
-            <div class="calling_email">
+            <div>
               <label for="email">Ваш e-mail:</label> <br />
               <input
                 type="email"
@@ -354,7 +385,7 @@
               />
             </div>
           </div>
-          <div class="calling_letter">
+          <div>
             <label for="letter">Текст письма:</label> <br />
             <textarea
               rows="5"
@@ -365,11 +396,9 @@
             ></textarea>
           </div>
           <button type="submit">ОТПРАВИТЬ</button>
-          <button class="close_basket" id="buy" type="button">X</button>
+          <button type="button">X</button>
         </form>
       </div>
     </section>
-
-    <script src="js/index.js"></script>
   </body>
 </html>
