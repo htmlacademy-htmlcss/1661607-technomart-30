@@ -65,9 +65,9 @@
   <main class="container container-catalog">
     <h1 class="visually-hidden">Техномарт: каталог</h1>
     <section class="breadcrumbs">
-      <h2>Расположение контента</h2>
+      <h2 class="visually-hidden">Расположение контента</h2>
       <ul class="breadcrumbs-list small-uppercase-text">
-        <li class="breadcrumbs-item"><a class="go-home" href="index.html"></a></li>
+        <li class="breadcrumbs-item"><a class="home-link" href="index.html"></a></li>
         <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
         <li class="breadcrumbs-item"><a href="#">Инструменты</a></li>
         <li class="breadcrumbs-item"><a href="#">Перфораторы</a></li>
@@ -138,25 +138,25 @@
       </form>
     </section>
 
-    <section class="sorting">
+    <section class="sorting small-uppercase-text">
       <h2>СОРТИРОВКА</h2>
       <ul class="sort-by-list">
-        <li class="sort-by-item sort-by-active">
-          <button type="button">ПО ЦЕНЕ</button>
+        <li>
+          <a class="sort-by-item sort-by-active" href="#">ПО ЦЕНЕ</a>
         </li>
-        <li class="sort-by-item">
-          <button type="button">ПО ТИПУ</button>
+        <li>
+          <a class="sort-by-item" href="#">ПО ТИПУ</a>
         </li>
-        <li class="sort-by-item">
-          <button type="button">ПО ФУНКЦИОНАЛУ</button>
+        <li>
+          <a class="sort-by-item" href="#">ПО ФУНКЦИОНАЛУ</a>
         </li>
       </ul>
       <ul class="order-by-list">
-        <li class="order-by-up">
-          <button type="button">up</button>
+        <li>
+          <a class="order-by-up" href="#"></a>
         </li>
-        <li class="order-by-down">
-          <button type="button">down</button>
+        <li>
+          <a class="order-by-down" href="#"></a>
         </li>
       </ul>
     </section>
@@ -240,13 +240,13 @@
       </ul>
     </section>
 
-    <section class="pagination">
+    <section class="pagination paragraph">
       <h2 class="visually-hidden">Страницы</h2>
       <ul class="pages-list">
-        <li class="pages-item"><a>1</a></li>
-        <li class="pages-item"><a href="#">2</a></li>
-        <li class="pages-item"><a href="#">3</a></li>
-        <li class="pages-item pages-item-next"><a href="#">Следущая</a></li>
+        <li><a class="pages-item pages-item-current">1</a></li>
+        <li><a class="pages-item" href="#">2</a></li>
+        <li><a class="pages-item" href="#">3</a></li>
+        <li><a class="pages-item pages-item-next" href="#">Следущая</a></li>
       </ul>
     </section>
 
@@ -331,28 +331,28 @@
     </div>
   </footer>
 
-  <!-- <section>
-      <div>
+    <section class="modal-wrapper">
+      <div class="modal modal-added">
         <h2>Товар добавлен в корзину!</h2>
-        <div>
-          <button id="buy" type="button">Оформить заказ</button>
-          <button type="button">Продолжить покупки</button>
+        <div class="modal-buttons">
+          <button class="button button-buy" id="buy" type="button">Оформить заказ</button>
+          <button class="modal-button-continue button" type="button">Продолжить покупки</button>
         </div>
-        <button type="button">X</button>
+        <button type="button" class="modal-close"></button>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <template id="buy-and-bookmark">
-      <div>
+    <!-- <template id="buy-and-bookmark"> -->
+      <section class="product-hover products-item">
         <div>
-          <button type="button" id="buy-prod">купить</button>
-          <button type="button" id="bookmark-prod">в закладки</button>
+          <button type="button" class="buy-prod">купить</button>
+          <button type="button" class="bookmark-prod">в закладки</button>
         </div>
-        <h3></h3>
-        <p></p>
-        <p></p>
-      </div>
-    </template> -->
+        <h3>Перфоратор BOSH BFG6000</h3>
+        <p class="product-oldprice">22550 P.</p>
+        <p class="product-price">12550 P.</p>
+      </section>
+    <!-- </template> -->
 
 </body>
 
