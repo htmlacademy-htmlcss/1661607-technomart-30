@@ -129,6 +129,7 @@
     height: auto;
 }
 
+
 /* text-styles */
 
 .header-text {
@@ -189,7 +190,6 @@
 }
 
 
-
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -197,6 +197,7 @@
     height: 1px;
     margin: -1px;
   }
+
 
 /* buttons */
 
@@ -294,6 +295,7 @@
     color: var(--white-half)
 }
 
+
 /* header-center */
 
 .main-info {
@@ -378,6 +380,7 @@
     background-color: var(--basic-white);
 }
 
+
 /* promo */
 
 .promo {
@@ -453,7 +456,6 @@
     font-size: 17px;
     line-height: 18px;
     border: 1px solid var(--light-1);
-
     width: 220px;
     height: 318px;
 }
@@ -489,7 +491,6 @@
 .firms-item {
     background-color: var(--basic-white);
     border: 1px solid var(--light-1);
-
     width: 220px;
     height: 145px;
     display: flex;
@@ -530,7 +531,6 @@
     background: var(--basic-dark);
     box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--dark-1);
     cursor: pointer;
-
     width: 240px;
     height: 61px;
 }
@@ -576,6 +576,7 @@
     width: 300px;
     background-color: var(--basic-gray)
 }
+
 
 /* footer */
 
@@ -623,7 +624,6 @@
     opacity: .5;
 }
 
-
 .footer-bottom {
     background-color: var(--basic-extra-dark);
 }
@@ -661,7 +661,6 @@
     background-color: var(--basic-red)
 }
 
-
 .web-contacts-item a {
     color: var(--basic-yellow)
 }
@@ -675,7 +674,6 @@
     color: var(--basic-red);
 }
   
-
 
 
 /* CATALOG */
@@ -694,11 +692,13 @@
     background-repeat: no-repeat;
 }
 
+
 /* tools */
 
 .tools {
     background-color: var(--gray-5);
 }
+
 
 /* filtres */
 
@@ -762,6 +762,7 @@
     display: inline-block;
     cursor: pointer;
     border-bottom: 1px dotted var(--basic-red);
+    color: var(--basic-black);
     opacity: .3;
 }
 
@@ -836,8 +837,7 @@
 }
 
 .pages-item:active {
-    border-color: var(--basic-red);
-    
+    border-color: var(--basic-red);  
 }
 
 
