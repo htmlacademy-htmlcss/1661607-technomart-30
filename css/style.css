@@ -133,7 +133,7 @@
 /* text-styles */
 
 .header-text {
-    font-family: Cuprum, Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
@@ -143,7 +143,7 @@
 }
 
 .middle-text {
-    font-family: Cuprum, Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     color: var(--basic-white);
     font-style: normal;
     font-weight: normal;
@@ -152,7 +152,7 @@
 }
 
 .small-text {
-    font-family: Cuprum;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -161,7 +161,7 @@
 }
 
 .paragraph {
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
@@ -170,7 +170,7 @@
 }
 
 .small-uppercase-text {
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
@@ -180,7 +180,7 @@
 }
 
 .medium-uppercase-text {
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -203,7 +203,7 @@
 
 .button {
     background-color: var(--basic-red);
-    font-family: Cuprum, Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     color: var(--basic-white);
     text-transform: uppercase;
     display: inline-block;
@@ -259,10 +259,9 @@
 .main-header-logo {
     background-color: var(--basic-red);
     text-align: center;
-
     width: 220px;
     height: 47px;
-    box-shadow: inset 0px -5px 0px var(-black-opacity-24);
+    box-shadow: inset 0px -5px 0px var(--black-opacity-24);
     box-sizing: border-box;
     padding: 13px 0 18px;
 }
@@ -552,7 +551,7 @@
 .service-img {
     width: 468px;
     height: 261px;
-    background-repeat: none;
+    background-repeat: no-repeat;
 }
 
 .service-img-truck {
@@ -707,7 +706,7 @@
 }
 
 .filtres legend {
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
@@ -723,7 +722,7 @@
 }
 
 .range-price {
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
@@ -739,7 +738,7 @@
 }
 
 .filter-button {
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
@@ -940,7 +939,7 @@
 }
 
 .modal-added h2 {
-    font-family: Cuprum, Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -955,7 +954,7 @@
 .bookmark-prod {
     height: 38px;
     width: 135px;
-    font-family: Cuprum, Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
