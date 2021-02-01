@@ -81,6 +81,7 @@
     --red-light: #FF5357;
 
     --basic-pale: #F7F3EC;
+    --pale-2: #F9F5F0;
     --basic-light: #F1F5F7;
     --light-1: #EAEAEA;
     --basic-yellow: #FFD180;
@@ -393,6 +394,7 @@
 }
 
 .promo-item {
+    font-family: "Cuprum", "Arial", sans-serif;
     height: 123px;
     width: 300px;
 }
@@ -400,7 +402,28 @@
 .promo-item h3 {
     line-height: 30px;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 700;
+}
+
+.promo-item {
+    background-repeat: no-repeat;
+    background-position: 85% 50%;
+}
+
+.promo-item-material {
+    background-image: url("../img/promo-icons/material.svg");
+}
+.promo-item-tool {
+    background-image: url("../img/promo-icons/tool.svg");
+}
+.promo-item-tech {
+    background-image: url("../img/promo-icons/tech.svg");
+}
+.promo-item-sale {
+    background-image: url("../img/promo-icons/discount.svg");
+}
+.promo-item-delivery {
+    background-image: url("../img/promo-icons/delivery.svg");
 }
 
 .promo-button {
@@ -410,6 +433,11 @@
     height: 38px;
     width: 135px;
     text-align: center;
+
+    line-height: 14px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 .promo-button:hover {
@@ -483,6 +511,13 @@
     background-image: url("../img/price-red.svg");
     background-repeat: no-repeat; */
 }
+
+
+.products-header,
+.firms-header {
+    background-color: var(--pale-2)
+}
+
 
 
 /* firms */
