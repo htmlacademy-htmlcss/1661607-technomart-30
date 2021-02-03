@@ -143,7 +143,7 @@
     color: var(--basic-black);
 }
 
-.middle-text {
+.for-item-text {
     font-family: "Cuprum", "Arial", sans-serif;
     color: var(--basic-white);
     font-style: normal;
@@ -152,7 +152,7 @@
     line-height: 24px;
 }
 
-.small-text {
+.sub-text {
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -170,7 +170,7 @@
     color: var(--basic-black);
 }
 
-.small-uppercase-text {
+.subtitle-text {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -180,7 +180,7 @@
     color: var(--basic-black);
 }
 
-.medium-uppercase-text {
+.form-value-text {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
