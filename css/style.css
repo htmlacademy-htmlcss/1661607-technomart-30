@@ -842,13 +842,14 @@
 
 .pages-item {
     background-color: transparent;
-    display: inline-block;
+    display: block;
     height: 38px;
     width: 38px;
     border: 1px solid var(--gray-4);
     border-radius: 2px;
     text-align: center;
     color: var(--basic-black);
+    margin-right: 10px;
 }
 
 .pages-item-current {
@@ -1072,7 +1073,7 @@
     height: 42px;
 }
 
-.header-top-items > a{
+.header-top-items > a {
     padding: 9px 25px;
 }
 
@@ -1127,7 +1128,7 @@
 
 /* grid promo*/
 
-/* !!! Так почему-то не работает, у картинки появляется огромный маргин-лефт, который не убивается даже margin: 0 !important. */
+/* !!! Так почему-то не работает, у картинки появляется огромный маргин-райт, который не убивается даже margin: 0 !important. */
 
 /* .promo {
     height: 409px;
@@ -1178,7 +1179,7 @@
 
 .promo {
     color: var(--basic-white); 
-    margin-top: 59px;
+    margin: 59px 0;
     height: 409px;
     width: 940px;
     display: grid;
@@ -1384,8 +1385,141 @@ margin: 23px 24px 5px;
     margin-left: 51px;
 }
 
+.products-header, .firms-header, .tools {
+    height: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px 0 28px;
 
-footer {
+}
+
+
+.breadcrumbs-list {
+    display: flex;
+}
+
+.breadcrumbs-item {
+    margin-right: 40px;
+}
+
+
+/* GRID CATALOG */
+
+/* filtres - product */
+
+
+.forms > * {
+    border: none;
+}
+
+.filter-range {
+    box-sizing: border-box; /*!!! почему-то не работает !!!*/
+    padding: 0;
+    margin: 0;
+}
+
+.range-prices {
+    display: flex;
+}
+
+.filter-button {
+    border: 1px solid rgba(0, 0, 0, 0.15)
+}
+
+.filter-text {
+    display: block;
+    width: 220px;
+    height: 38px;
+    margin: 0;
+    padding: 10px 151px 10px 18px;
+    box-sizing: border-box;
+}
+
+.grid-content-catalog {
+    width: 940px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 21px;
+    margin-top: 20px;
+}
+
+/* products-list-catalog */
+
+.products-list-catalog {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 18px;
+    z-index: 1;
+}
+
+/* sorting */
+
+.sorting {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    column-gap: 20px;
+    height: 38px;
+    margin: 0;
+    padding: 10px 14px 10px 19px;
+    box-sizing: border-box;
+}
+
+.sorting-text {
+    grid-column: 1 / 4;
+    margin: 0;
+}
+
+.sort-by-list {
+    grid-column: 4 / 9;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.order-by-list {
+    grid-column: 9 / 10;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+/* pagination */
+
+.pagination {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.pages-list {
+    grid-column: 2 / 5;
+    display: flex;
+}
+
+/* perforator-article */
+
+.perforator-article-wrapper {
+    width: 100%;
+    background-color: var(--basic-light);
+    display: flex;
+    justify-content: center;
+}
+
+.perforator-article {
+    width: 940px;
+    padding-top: 39px;
+    height: 261px;
+}
+
+
+
+
+
+/* 
+.products-list-catalog {
     outline: 5px solid rgba(200, 255, 0, 0.7);
     outline-offset: -5px;
-}
+} */
+
