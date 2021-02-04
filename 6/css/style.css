@@ -1099,16 +1099,21 @@
 /* grid main-header-navigation */
 
 .main-header-navigation {
-    padding: 0 40px;
+    padding: 0 22px 0 27px;
 }
 .header-navigation-list {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    margin: 0;
+    overflow: hidden;
+}
+
+.header-navigation-list li {
+    padding: 16px 0;
 }
 
 .header-navigation-list a {
-    box-sizing: border-box;
-    padding: 16px 20px 20px ;
+    padding: 26px;
 }
 
 
