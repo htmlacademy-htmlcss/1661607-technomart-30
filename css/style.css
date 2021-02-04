@@ -387,27 +387,39 @@
 /* promo */
 
 
-
 .promo-slide-img {
     background-color: var(--basic-dark);
     width: 620px;
-    height: 266px;
-    
+    height: 266px;   
 }
 
-/* .promo-slider {
-    background-color: var(--basic-dark);
-    background-image: url("../img/slides/slide-perforator.jpg");
-    width: 620px;
-    height: 266px; 
+.slider-dot-list {
+    position: absolute;
+    display: flex;
+    bottom: 36px;
+    left: 295px;
     margin: 0;
+}
+
+.slider-dot-item {
+    background-color: var(--basic-white);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px; 
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.slider-dot-active {
+    background-color: var(--basic-red);
+    border: 2px solid var(--basic-white);
     box-sizing: border-box;
-} */
+}
+
+
 
 .promo-item {
     font-family: "Cuprum", "Arial", sans-serif;
-    /* height: 123px;
-    width: 300px; */
 }
 
 .promo-item h3 {
