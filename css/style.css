@@ -312,11 +312,10 @@
     line-height: 30px;
     color: var(--basic-red);
     font-weight: bold;
-    display: inline-block;
     width: 270px;
     height: 45px;
     border: 3px solid var(--basic-white);
-    padding: 7px 45px 8px 74px;
+    padding: 4px 42px 5px 71px;
     box-sizing: border-box;
     position: relative;
 }
@@ -326,7 +325,7 @@
     width: 18px;
     height: 19px;
     position: absolute;
-    top: 11px;
+    top: 10px;
     left: 40px;
     background-image: url("../img/small-icons/icon-phone.svg");
 }
@@ -1138,6 +1137,7 @@
     grid-column: 2 / 3;
     margin-top: 3px;
     justify-self: start;
+    margin-left: 10px;
 }
 
 .user-name, .login-reg {
