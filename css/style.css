@@ -398,15 +398,15 @@
 
 
 /* main */
-.container {
-    background-color: var(--basic-white);
-}
+
 .container-main {
     padding-top: 59px;
+    background-color: var(--basic-white);
 }
 
 .container-catalog {
     padding-top: 21px;
+    background-color: var(--basic-white);
 }
 
 /* promo */
@@ -534,6 +534,15 @@
 
 /* products */
 
+.product-item-container {
+    width: 220px;
+    height: 175px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .products-item {
     text-align: center;
     font-family: "PT Sans", "Arial", sans-serif;
@@ -541,9 +550,17 @@
     font-size: 17px;
     line-height: 18px;
     border: 1px solid var(--light-1);
-    width: 220px;
-    height: 318px;
     box-sizing: border-box;
+}
+
+
+
+.products-item a {
+    display: grid;
+    grid-template-rows: min-content auto 31px 59px;
+    width: 218px;
+    min-height: 316px;
+    
 }
 
 .products-item:hover {
@@ -555,22 +572,25 @@
     font-size: 18px;
     line-height: 20px;
     color: var(--basic-black);
+    margin: 0 0 7px;
 }
 
 .product-oldprice {
     color: var(--gray-1);
     text-decoration: line-through;
+    margin: 0 0 13px;
 }
 
 .product-price {
     color: var(--basic-white);
-    background-color: var(--basic-red);
-    /* height: 38px;
+    height: 38px;
     width: 141px;
     background-image: url("../img/price-red.svg");
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
+    margin: 0 0 0 5px;
+    padding-top: 10px;
+    justify-self: center;
 }
-
 
 .products-header,
 .firms-header {
@@ -871,11 +891,11 @@
     font-size: 17px;
     line-height: 18px;
     display: flex;
-    align-items: center;
     text-align: center;
     text-transform: uppercase;
     height: 38px;
     width: 95px;
+    box-sizing: border-box;
     background-color: var(--basic-pale);
     border: none;
 }
@@ -893,8 +913,15 @@
     cursor: pointer;
 }
 
-/* filters - product */
+.form-line {
+    margin: 0;
+    height: 1px;
+    background-color: var(--basic-gray);
 
+    /* !!!в фигме указан этот, но его не видно!!!
+    background-color: rgba(0, 0, 0, 0.0001); */
+    border: none;
+}
 .forms fieldset {
     border: none;
     padding-left: 0;
@@ -905,11 +932,18 @@
 
 .range-prices {
     display: flex;
+    justify-content: space-between;
 }
+
+/* filters - product */
+
+
 
 .filter-button {
     border: 1px solid rgba(0, 0, 0, 0.15)
 }
+
+
 
 .filter-text {
     display: block;
@@ -941,6 +975,8 @@
 }
 .range {
     margin-bottom: 9px;
+    display: flex;
+    justify-content: center;
 }
 
 .range-prices {
@@ -1414,17 +1450,15 @@
 }
 
 
-
 /* grid main*/
 
 .container {
     display: grid;
-    background-color: var(--basic-white);
+    justify-items: center;
 }
 
 .container > * {
-    box-sizing: border-box;
-    justify-self: center;
+    /* box-sizing: border-box; */
     width: 940px;
 }
 
@@ -1482,7 +1516,6 @@
 .promo {
     color: var(--basic-white); 
     height: 409px;
-    width: 940px;
     display: grid;
     grid-auto-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr 1fr 1fr;
@@ -1513,6 +1546,7 @@
     grid-column: 3 / 4;
 }
 /* --- */
+
 
 .promo-item-sale {
     grid-row: 2 / 3;
@@ -1556,7 +1590,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px 0 0 0;
-    margin-bottom: 70px;
+    margin: 0 0 70px;
 }
 
 /* !!!объдинить products-list и firms-list ? !!!*/
