@@ -581,6 +581,7 @@
     margin: 0 0 13px;
 }
 
+/* !!!первый вариант добавления "красной цены" - через картинку в css!!! */
 .product-price {
     color: var(--basic-white);
     height: 38px;
@@ -590,6 +591,23 @@
     margin: 0 0 0 5px;
     padding-top: 10px;
     justify-self: center;
+}
+
+/* !!!второй вариант добавления "красной цены" через свг в хтмл!!! */
+.product-pricez {
+    color: var(--basic-white);
+    margin: 0 0 0 5px;
+    justify-self: center;
+    position: relative;
+}
+
+.price-span {
+    position: absolute;
+    height: 38px;
+    width: 141px;
+    top: 10px;
+    left: 0;
+    z-index: 1;
 }
 
 .products-header,

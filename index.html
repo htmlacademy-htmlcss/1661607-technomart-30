@@ -120,6 +120,8 @@
         <a class="button" href="catalog.html">Все популярные товары</a>
       </header>
       <ul class="products-list">
+
+        <!-- !!!первый вариант добавления "красной цены" - через картинку в css!!! -->
         <li class="products-item">
           <a href="#">
             <div class="product-item-container">
@@ -150,6 +152,8 @@
             <p class="product-price">25550 P.</p>
           </a>
         </li>
+
+        <!-- !!!второй вариант добавления "красной цены" через свг в хтмл!!! -->
         <li class="products-item">
           <a href="#">
             <div class="product-item-container">
@@ -157,7 +161,13 @@
             </div>
             <h3>Перфоратор BOSH BFG2000</h3>
             <p class="product-oldprice">22550 P.</p>
-            <p class="product-price">12550 P.</p>
+            <p class="product-pricez">
+              <svg width="141" height="38" viewBox="0 0 141 38">
+                <polygon points="3,0 120,0 141,19 120,38 3,38" fill="#EE3643"/>
+                <rect width="38" height="38" rx="3" fill="#EE3643"/>
+              </svg>
+              <span class="price-span">12550 P.</span>
+            </p>
           </a>
         </li>
       </ul>
