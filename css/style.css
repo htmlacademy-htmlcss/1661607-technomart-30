@@ -660,14 +660,57 @@
     background-image: url('../img/services/credit.png');
 }
 
-.transport-list {
-    color: var(--basic-black)
+
+/* company-info */
+
+.company-info h2 {
+    margin-bottom: 24px;
+}
+
+.company-description-text {
+    min-height: 147px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.company-transport-list {
+    color: var(--basic-black);
+    padding-bottom: 20px;
+    padding-left: 37px;
+}
+
+.company-transport-item:not(:last-child) {
+    margin-bottom: 12px;   
+}
+
+.company-transport-item {
+    position: relative;
+}
+
+.company-transport-item::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -37px;
+    background-color: var(--basic-red);
+    width: 25px;
+    height: 2px;
 }
 
 .map-img {
     height: 158px;
     width: 300px;
     background-color: var(--basic-gray)
+}
+
+.company-location p {
+    margin-bottom: 32px;
+}
+
+.map-img {
+    margin-bottom: 25px;
 }
 
 
@@ -698,6 +741,15 @@
 
 .footer-phone {
     color: var(--basic-light)
+}
+
+.footer-address-phone {
+    padding: 22px 0 54px;
+}
+
+.footer-address-phone p {
+    padding: 0;
+    margin: 0;
 }
 
 .footer-secondary-navigation a {
@@ -885,7 +937,7 @@
     padding-top: 14px;
     margin-bottom: 11px;
 
-    /* !!!есть какая-то непонятная дыра между legend и ползунком, не мпргин и не паддинг!!! */
+    /* !!!есть какая-то непонятная дыра между legend и ползунком, не маргин и не паддинг!!! */
 }
 .range {
     margin-bottom: 9px;
@@ -1378,7 +1430,7 @@
 
 /* grid promo*/
 
-/* !!! Так почему-то не работает, у картинки появляется огромный маргин-райт, который не убивается даже margin: 0 !important. */
+/* !!! Так почему-то не работает, у картинки появляется огромный маргин-райт, который не убивается даже margin: 0 !important. !!!*/
 
 /* .promo {
     height: 409px;
@@ -1507,7 +1559,7 @@
     margin-bottom: 70px;
 }
 
-/* объдинить products-list и firms-list */
+/* !!!объдинить products-list и firms-list ? !!!*/
 
 
 /* grid firms-list */
@@ -1554,7 +1606,7 @@
     padding: 21px 0 0 0;
     margin: 0;
 /* 
-    а еще там есть какая-то вертикальная хреновина (10х279), которую я не представляю как сверстать ... - маргин от нее*/
+    !!!а еще там есть какая-то вертикальная хреновина (10х279), которую я не представляю как сверстать!!! ... - маргин от нее*/
 }
 
 .services-item {
@@ -1640,14 +1692,18 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 40px;
+    margin: 0;
     margin-left: -10px;
+    padding: 37px 0 34px;
 }
 
 .footer-secondary-navigation {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 40px;
+    margin: 0;
     margin-left: 10px;
+    padding: 28px 0 74px;
 }
 
 /* footer-bottom */
@@ -1724,7 +1780,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    /* по идее надо бы задать, но и так работает... и даже лучше */
+    /* !!!по идее надо бы задать, но и так работает... и даже лучше!!! */
     /* grid-template-rows: 1fr 1fr 1fr; */
 
     column-gap: 20px;
