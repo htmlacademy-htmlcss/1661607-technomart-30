@@ -1,5 +1,3 @@
-/* в задании не сказано, но пришлось задать некоторые размеры блокам - иначе цвет не разобрать */
-
 @font-face {
     font-family: "Cuprum";
     font-weight: 400;
@@ -122,7 +120,6 @@
 
 .page-body ul {
     list-style: none;
-    padding: 0;
 }
 
 .page-body img {
@@ -141,24 +138,27 @@
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-black);
+    margin: 0;
 }
 
-.middle-text {
+.for-item-text {
     font-family: "Cuprum", "Arial", sans-serif;
     color: var(--basic-white);
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
+    margin: 0;
 }
 
-.small-text {
+.sub-text {
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-white);
+    margin: 0;
 }
 
 .paragraph {
@@ -168,9 +168,10 @@
     font-size: 13px;
     line-height: 24px;
     color: var(--basic-black);
+    margin: 0;
 }
 
-.small-uppercase-text {
+.subtitle-text {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -178,9 +179,10 @@
     line-height: 18px;
     text-transform: uppercase;
     color: var(--basic-black);
+    margin: 0;
 }
 
-.medium-uppercase-text {
+.form-value-text {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -188,6 +190,7 @@
     line-height: 19px;
     text-transform: uppercase;
     color: var(--basic-black);
+    margin: 0;
 }
 
 
@@ -220,7 +223,8 @@
 }
 
 .button-credit {
-    background-color: var(--red-light)
+    background-color: var(--red-light);
+    display: none;
 }
 
 .button-about {
@@ -274,6 +278,7 @@
 .search {
     background-color: var(--basic-extra-dark);
     color: var(--basic-white);
+    border: none;
 }
 .search:focus {
     background-color: var(--basic-white);
@@ -305,15 +310,27 @@
     font-style: italic;
 }
 
-.address-phone {
-    text-align: center;
-}
-
 .main-phone {
     font-size: 21px;
     line-height: 30px;
     color: var(--basic-red);
     font-weight: bold;
+    width: 270px;
+    height: 45px;
+    border: 3px solid var(--basic-white);
+    padding: 4px 42px 5px 71px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main-phone::before {
+    content: "";
+    width: 18px;
+    height: 19px;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    background-image: url("../img/small-icons/icon-phone.svg");
 }
 
 .main-address {
@@ -321,8 +338,12 @@
     color: var(--basic-dark);
 }
 
-.login-link,
-.registration-link,
+.login-reg a {
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic-black);
+}
+
 .user-name {
     display: inline-block;
     height: 45px;
@@ -358,6 +379,7 @@
 .main-header-navigation {
      background: var(--basic-dark);
      text-align: center;
+     box-shadow: inset 0px -5px 0px var(--basic-extra-dark);
      
  }
 
@@ -376,38 +398,70 @@
 
 
 /* main */
-.container {
+
+.container-main {
+    padding-top: 59px;
     background-color: var(--basic-white);
 }
 
+.container-catalog {
+    padding-top: 21px;
+    background-color: var(--basic-white);
+}
 
 /* promo */
 
-.promo {
-   color: var(--basic-white); 
-}
 
 .promo-slide-img {
     background-color: var(--basic-dark);
     width: 620px;
-    height: 266px;
+    height: 266px;   
+}
+
+.slider-dot-list {
+    padding: 0;
+    position: absolute;
+    display: flex;
+    bottom: 36px;
+    left: 50%;
+    margin: 0;
+}
+
+.slider-dot-item {
+    background-color: var(--basic-white);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px; 
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.slider-dot-item:last-child {
+    margin-right: 0;
+}
+
+.slider-dot-active {
+    background-color: var(--basic-red);
+    border: 2px solid var(--basic-white);
+    box-sizing: border-box;
 }
 
 .promo-item {
     font-family: "Cuprum", "Arial", sans-serif;
-    height: 123px;
+    background-repeat: no-repeat;
+    background-position: 85% 50%;
+    padding: 20px 0 21px 23px;
+    box-sizing: border-box;
     width: 300px;
+    height: 123px;
 }
 
 .promo-item h3 {
     line-height: 30px;
     font-size: 24px;
     font-weight: 700;
-}
-
-.promo-item {
-    background-repeat: no-repeat;
-    background-position: 85% 50%;
+    margin: 0;
+    margin-bottom: 14px;
 }
 
 .promo-item-material {
@@ -429,15 +483,17 @@
 .promo-button {
     background-color: var(--white-third);
     color: var(--basic-white);
-    display: block;
     height: 38px;
     width: 135px;
-    text-align: center;
-
     line-height: 14px;
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
+    display: flex;
+}
+
+.promo-item-description {
+    margin: auto;
 }
 
 .promo-button:hover {
@@ -469,12 +525,23 @@
 }
 
 .promo-slide-name {
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-weight: bold;
     font-size: 36px;
     line-height: 36px;
 }
 
 
 /* products */
+
+.product-item-container {
+    width: 220px;
+    height: 175px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .products-item {
     text-align: center;
@@ -483,8 +550,17 @@
     font-size: 17px;
     line-height: 18px;
     border: 1px solid var(--light-1);
-    width: 220px;
-    height: 318px;
+    box-sizing: border-box;
+}
+
+
+
+.products-item a {
+    display: grid;
+    grid-template-rows: min-content auto 31px 59px;
+    width: 218px;
+    min-height: 316px;
+    
 }
 
 .products-item:hover {
@@ -496,22 +572,25 @@
     font-size: 18px;
     line-height: 20px;
     color: var(--basic-black);
+    margin: 0 0 7px;
 }
 
 .product-oldprice {
     color: var(--gray-1);
     text-decoration: line-through;
+    margin: 0 0 13px;
 }
 
 .product-price {
     color: var(--basic-white);
-    background-color: var(--basic-red);
-    /* height: 38px;
+    height: 38px;
     width: 141px;
     background-image: url("../img/price-red.svg");
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
+    margin: 0 0 0 5px;
+    padding-top: 10px;
+    justify-self: center;
 }
-
 
 .products-header,
 .firms-header {
@@ -527,11 +606,16 @@
     border: 1px solid var(--light-1);
     width: 220px;
     height: 145px;
-    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
-.firms-item a{
-    margin: auto;
+.firms-item a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .firms-item:hover {
@@ -546,11 +630,7 @@
 
 /* services */
 
-.services {
-    background-color: var(--basic-light);
-}
-
-.service-description .cuprum-header {
+.service-description .header-text {
     color: var(--basic-dark);
 }
 
@@ -579,14 +659,13 @@
     box-shadow: 0px 1px 0px var(--basic-white);
 }
 
-.button-credit {
-    display: none;
-}
-
 .service-img {
     width: 468px;
     height: 261px;
     background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .service-img-truck {
@@ -601,8 +680,43 @@
     background-image: url('../img/services/credit.png');
 }
 
-.transport-list {
-    color: var(--basic-black)
+
+/* company-info */
+
+.company-info h2 {
+    margin-bottom: 24px;
+}
+
+.company-description-text {
+    min-height: 147px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.company-transport-list {
+    color: var(--basic-black);
+    padding-bottom: 20px;
+    padding-left: 37px;
+}
+
+.company-transport-item:not(:last-child) {
+    margin-bottom: 12px;   
+}
+
+.company-transport-item {
+    position: relative;
+}
+
+.company-transport-item::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -37px;
+    background-color: var(--basic-red);
+    width: 25px;
+    height: 2px;
 }
 
 .map-img {
@@ -611,12 +725,16 @@
     background-color: var(--basic-gray)
 }
 
+.company-location p {
+    margin-bottom: 32px;
+}
+
+.map-img {
+    margin-bottom: 25px;
+}
+
 
 /* footer */
-
-.footers-top {
-    background-color: var(--basic-dark);
-}
 
 .footer-logo {
     background: var(--basic-red);
@@ -645,6 +763,15 @@
     color: var(--basic-light)
 }
 
+.footer-address-phone {
+    padding: 22px 0 54px;
+}
+
+.footer-address-phone p {
+    padding: 0;
+    margin: 0;
+}
+
 .footer-secondary-navigation a {
     color: var(--basic-yellow);
 }
@@ -656,16 +783,6 @@
 .footer-secondary-navigation a:active {
     text-decoration: none;
     opacity: .5;
-}
-
-.footer-bottom {
-    background-color: var(--basic-extra-dark);
-}
-
-.footer-main-navigation,
-.footer-secondary-navigation,
-.social-list {
-    text-align: center;
 }
 
 .social-button {
@@ -713,16 +830,22 @@
 /* CATALOG */
 
 /* breadcrumbs */
+
+.breadcrumbs-list {
+    margin-bottom: 20px;
+}
+
 .breadcrumbs-list a{
     color: var(--basic-black);
 }
 
 .home-link {
     display: block;
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 16px;
     background-color: transparent;
     background-image: url("../img/small-icons/icon-home.svg");
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -735,6 +858,11 @@
 
 
 /* filtres */
+
+.grid-content-catalog ul {
+    padding: 0;
+}
+
 
 .filtres h2 {
     background-color: var(--basic-pale)
@@ -763,11 +891,11 @@
     font-size: 17px;
     line-height: 18px;
     display: flex;
-    align-items: center;
     text-align: center;
     text-transform: uppercase;
     height: 38px;
     width: 95px;
+    box-sizing: border-box;
     background-color: var(--basic-pale);
     border: none;
 }
@@ -783,6 +911,97 @@
     width: 220px;
     background-color: var(--basic-white);
     cursor: pointer;
+}
+
+.form-line {
+    margin: 0;
+    height: 1px;
+    background-color: var(--basic-gray);
+
+    /* !!!в фигме указан этот, но его не видно!!!
+    background-color: rgba(0, 0, 0, 0.0001); */
+    border: none;
+}
+.forms fieldset {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.range-prices {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* filters - product */
+
+
+
+.filter-button {
+    border: 1px solid rgba(0, 0, 0, 0.15)
+}
+
+
+
+.filter-text {
+    display: block;
+    width: 220px;
+    height: 38px;
+    margin: 0;
+    padding: 10px 151px 10px 18px;
+    box-sizing: border-box;
+}
+
+.filtres li {
+    margin-bottom: 16px;
+}
+
+.filtres li:last-child {
+    margin-bottom: 0;
+}
+
+.filter-range {
+    margin-bottom: 25px;
+    padding: 14px 0 0;
+}
+
+.filter-range legend {
+    padding-top: 14px;
+    margin-bottom: 11px;
+
+    /* !!!есть какая-то непонятная дыра между legend и ползунком, не маргин и не паддинг!!! */
+}
+.range {
+    margin-bottom: 9px;
+    display: flex;
+    justify-content: center;
+}
+
+.range-prices {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-checkboxes {
+    padding: 0;
+    margin-bottom: 26px;
+}
+
+.filter-checkboxes legend {
+    padding-top: 16px;
+    margin-bottom: 15px;
+}
+
+.filter-radio {
+    padding: 0;
+    margin-bottom: 34px;
+}
+
+.filter-radio legend {
+    padding-top: 18px;
+    margin-bottom: 21px;
 }
 
 
@@ -846,16 +1065,20 @@
 
 
 /* pagination */
+.pagination ul {
+    padding: 0;
+}
 
 .pages-item {
     background-color: transparent;
-    display: inline-block;
+    display: block;
     height: 38px;
     width: 38px;
     border: 1px solid var(--gray-4);
     border-radius: 2px;
     text-align: center;
     color: var(--basic-black);
+    margin-right: 10px;
 }
 
 .pages-item-current {
@@ -1027,3 +1250,635 @@
     border-color: var(--basic-dark-opacity);
     color: var(--basic-dark-opacity);
 }
+
+
+/* GRID */
+
+.page {
+    height: 100%;
+}
+
+.page-body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
+
+/* header grid */
+
+.header-top-wrapper {
+    width: 100%;
+    background-color: var(--basic-extra-dark);
+    display: grid;
+}
+
+.main-header-top {   
+    justify-self: center;
+    width: 940px;
+}
+
+.main-header {
+    display: grid;
+    grid-template-rows: 42px 1fr 60px;
+    padding-bottom: 60px;
+}
+
+.main-header > * {
+    box-sizing: border-box;
+}
+  
+.main-header-center, .main-header-navigation {
+    width: 940px;
+    justify-self: center;
+}
+
+/* grid header-top */
+
+.header-top-items {
+    display: grid;
+    grid-template-columns: auto 1fr max-content max-content max-content;
+    height: 42px;
+}
+
+.header-top-items > a {
+    padding: 9px 25px;
+}
+
+.button-arrange, .button-bookmark, .button-cart, .search {
+    box-sizing: border-box;
+    height: 42px;
+}
+
+/* grid main-header-center */
+
+
+.main-header-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 67px;
+    height: 158px;
+}
+
+.main-info {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+.main-phone {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    align-self: end;
+    justify-self: start;
+}
+
+.main-address {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    margin-top: 0;
+    padding: 3px 0 0 10px;
+    justify-self: start;
+}
+
+.user-name, .login-reg {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    align-self: end;
+    justify-self: end;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.login-reg {
+    height: 45px;
+    width: 281px;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-name {
+    padding: 12px 57px;
+    background-color: var(--basic-white);
+    position: relative;
+}
+
+.user-name::before, .user-name::after {
+    content: "";
+    position: absolute;
+    bottom: 14px;
+    width: 20px;
+    height: 17px;
+}
+
+.user-name::before {
+    left: 15px;
+    background-image: url("../img/small-icons/icon-user.svg")
+}
+
+
+.user-name::after {
+    left: 262px;
+    background-image: url("../img/small-icons/icon-logout.svg")
+}
+
+
+.login-link {
+    padding: 12px 27px 12px 45px;
+    background-color: var(--basic-white);
+    position: relative;
+}
+
+.login-link::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/small-icons/icon-login.svg");
+    width: 20px;
+    height: 17px;
+    bottom: 14px;
+    left: 19px;
+}
+
+.registration-link {
+    padding: 12px 24px;
+    background-color: var(--basic-white);
+}
+
+.orders-cabinet {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    justify-self: center;
+    padding-top: 7px;
+}
+
+.dot-cabinet {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: var(--basic-black);
+    border-radius: 50%;
+    margin: 6px 10px 2px;
+}
+
+.dot-cabinet:hover {
+    background-color: var(--basic-red);
+}
+
+
+/* grid main-header-navigation */
+
+.main-header-navigation {
+    padding: 0 22px 0 27px;
+}
+.header-navigation-list {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header-navigation-list li {
+    padding: 16px 0;
+}
+
+.header-navigation-list a {
+    padding: 26px;
+}
+
+
+/* grid main*/
+
+.container {
+    display: grid;
+    justify-items: center;
+}
+
+.container > * {
+    /* box-sizing: border-box; */
+    width: 940px;
+}
+
+/* grid promo*/
+
+/* !!! Так почему-то не работает, у картинки появляется огромный маргин-райт, который не убивается даже margin: 0 !important. !!!*/
+
+/* .promo {
+    height: 409px;
+    width: 940px;
+    display: grid;
+    grid-template-areas: 
+        "material tool tech"
+        "slider slider sale"
+        "slider slider delivery";
+}
+
+.promo-item-material {
+    grid-area: material;
+}
+.promo-item-tool {
+    grid-area: tool;
+}
+.promo-item-tech {
+    grid-area: tech;
+}
+.promo-slider {
+    grid-area: slider;
+    padding: 0;
+    margin: 0;
+}
+.promo-item-sale {
+    grid-area: sale;
+}
+.promo-item-delivery {
+    grid-area: delivery;
+}
+
+.promo-slide {
+    position: relative;
+    box-sizing: border-box;
+}
+.promo-slide-name {
+    position: absolute;
+}
+
+.promo-slide-description {
+    position: absolute;
+}
+
+.promo-slide-button {
+    position: absolute;
+} */
+
+.promo {
+    color: var(--basic-white); 
+    height: 409px;
+    display: grid;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 59px;
+}
+
+.promo-slider {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+}
+
+
+/* работает и без них: */
+
+.promo-item-material {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.promo-item-tool {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.promo-item-tech {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+/* --- */
+
+
+.promo-item-sale {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+.promo-item-delivery {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+.promo-slide {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.promo-slide-name {
+    padding-top: 23px;
+    margin: 0 0 5px;
+}
+
+.promo-slide-description {
+    margin: 0;
+}
+
+.promo-slide-text {
+    padding-left: 24px;
+    position: absolute;
+}
+
+.promo-slide-button {
+    position: absolute;
+    top: 201px;
+    left: 24px;
+}
+
+/* grid products-list */
+
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 0 0 0;
+    margin: 0 0 70px;
+}
+
+/* !!!объдинить products-list и firms-list ? !!!*/
+
+
+/* grid firms-list */
+
+.firms-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 1fr 1fr; */
+    gap: 20px;
+    padding: 20px 0 0 0;
+    margin-bottom: 70px;
+}
+
+/* grid services */
+
+.services-wrapper {
+    width: 100%;
+    background-color: var(--basic-light);
+}
+
+.services {
+    margin: auto;
+    width: 940px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    position: relative;
+}
+
+.services-info {
+    grid-row: 1 / 2;
+    grid-column: 1 / 7;
+    padding-top: 64px;
+}
+
+.services-info h2 {
+    margin: 0 0 25px;
+}
+
+
+.services-tabs-list {
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+    padding: 21px 0 0 0;
+    margin: 0;
+/* 
+    !!!а еще там есть какая-то вертикальная хреновина (10х279), которую я не представляю как сверстать!!! ... - маргин от нее*/
+}
+
+.services-item {
+    height: 61px;
+    width: 240px;
+    box-sizing: border-box;
+    padding: 14px 0 17px 22px;
+    margin: 0;
+}
+
+.service-description {
+    padding: 46px 0 0 0;
+    min-height: 322px;
+    grid-row: 2 / 3;
+    grid-column: 5 / 9;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.service-description h3 {
+    margin-bottom: 30px;
+}
+
+.service-img {
+    grid-row: 2 / 3;
+    grid-column: 7 / 13;
+}
+
+.company-info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.company-description {
+    grid-column: 1 / 4;
+    padding: 70px 0;
+}
+
+.company-location {
+    grid-column: 5 / 7;
+    padding: 70px 0;
+}
+
+
+/* grid footer*/
+
+.main-footer {
+    height: 300px;
+    display: grid;
+    grid-template-rows: auto 107px;
+}
+
+.footers-top-wrapper {
+    width: 100%;
+    display: grid;
+    background-color: var(--basic-dark);
+}
+
+.footers-bottom-wrapper {
+    width: 100%;
+    min-height: 107px;
+    display: grid;
+    background-color: var(--basic-extra-dark);
+    align-items: center;
+}
+
+/* footers-top */
+
+.footers-top {
+    width: 940px;
+    justify-self: center;
+    display: grid;
+    grid-template-rows: 68px auto;
+    background-color: var(--basic-dark);
+}
+
+.footer-top-item {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
+
+.footer-main-navigation {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 40px;
+    margin: 0;
+    margin-left: -10px;
+    padding: 37px 0 34px;
+}
+
+.footer-secondary-navigation {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    margin: 0;
+    margin-left: 10px;
+    padding: 28px 0 74px;
+}
+
+/* footer-bottom */
+
+
+.footer-bottom {
+    background-color: var(--basic-extra-dark);
+    width: 940px;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+/* не удержался */
+.social-list {
+    padding: 0 36px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.web-contacts-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.web-contacts-list p {
+    margin: 0;
+}
+
+.web-contacts-item1 {
+    margin-right: 51px;
+}
+
+
+
+
+.products-header, .firms-header, .tools {
+    height: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 29px 14px 30px 28px;
+    box-sizing: border-box;
+}
+
+.breadcrumbs-list {
+    display: flex;
+}
+
+.breadcrumbs-item {
+    margin-right: 40px;
+}
+
+
+/* GRID CATALOG */
+
+
+/* grid-content-catalog */
+
+.grid-content-catalog {
+    width: 940px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 21px;
+    padding-top: 20px;
+}
+
+/* products-list-catalog */
+
+.products-list-catalog {
+    min-height: 654px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* !!!по идее надо бы задать, но и так работает... и даже лучше!!! */
+    /* grid-template-rows: 1fr 1fr 1fr; */
+
+    column-gap: 20px;
+    row-gap: 18px;
+}
+
+/* sorting */
+
+.sorting {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    column-gap: 20px;
+    height: 38px;
+    margin: 0;
+    padding: 10px 14px 10px 19px;
+    box-sizing: border-box;
+}
+
+.sorting-text {
+    grid-column: 1 / 4;
+    margin: 0;
+}
+
+.sort-by-list {
+    grid-column: 4 / 9;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.order-by-list {
+    grid-column: 9 / 10;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+/* pagination */
+
+.pagination {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.pages-list {
+    grid-column: 2 / 5;
+    display: flex;
+}
+
+/* perforator-article */
+
+.perforator-article-wrapper {
+    width: 100%;
+    background-color: var(--basic-light);
+    display: flex;
+    justify-content: center;
+}
+
+.perforator-article {
+    width: 940px;
+    padding: 64px 0 68px;
+}
+
+.perforator-article h2 {
+    margin: 0 0 25px;
+}
+
