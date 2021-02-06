@@ -1771,6 +1771,37 @@
     margin: 1px 0;
 }
 
+/* !!! первый вариант добавления уголка NEW !!! */
+
+.products-item-new {
+    position: relative;
+}
+
+.products-item-new::after {
+    position: absolute;
+    content: "";
+    width: 67px;
+    height: 67px;
+    top: 0;
+    right: 0;
+    background-image: url("../img/new.png");
+
+}
+
+/* !!! второй вариант добавления уголка NEW !!! */
+.products-item-new1 {
+    position: relative;
+}
+
+.new-product-coner {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    top: 0;
+    right: 0;
+    background-image: url("../img/new.png");
+}
+
 
 /* modals */
 
