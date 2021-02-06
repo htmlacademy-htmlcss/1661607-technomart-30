@@ -1489,8 +1489,16 @@
     background-image: url("../img/small-icons/icon-logout-hov.svg")
 }
 
+.logout-img:active {
+    background-image: url("../img/small-icons/icon-logout.svg")
+}
+
 .user-name-name:hover .user-name-img {
     background-image: url("../img/small-icons/icon-user-hov.svg")
+}
+
+.user-name-name:active .user-name-img {
+    background-image: url("../img/small-icons/icon-user.svg")
 }
 
 /* .user-name::before, .user-name::after {
@@ -1519,16 +1527,6 @@
     position: relative;
 }
 
-/* .login-link::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/small-icons/icon-login.svg");
-    width: 20px;
-    height: 17px;
-    bottom: 14px;
-    left: 19px;
-} */
-
 .login-link-img {
     position: absolute;
     background-image: url("../img/small-icons/icon-login.svg");
@@ -1542,6 +1540,9 @@
     background-image: url("../img/small-icons/icon-login-hov.svg")
 }
 
+.login-link:active .login-link-img {
+    background-image: url("../img/small-icons/icon-login.svg");
+}
 
 .registration-link {
     padding: 12px 24px;
