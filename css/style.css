@@ -443,7 +443,7 @@
 
 .login-link:hover,
 .registration-link:hover,
-.user-name:hover,
+.user-name-name:hover,
 .user-orders:hover,
 .user-cabinet:hover {
     color: var(--basic-red);
@@ -451,7 +451,7 @@
 
 .login-link:active,
 .registration-link:active,
-.user-name:active, 
+.user-name-name:active, 
 .user-orders:active,
 .user-cabinet:active {
     color: var(--basic-gray);
@@ -1455,13 +1455,45 @@
     justify-content: space-between;
 }
 
+
 .user-name {
-    padding: 12px 57px;
+    padding: 12px 57px 12px 0;
     background-color: var(--basic-white);
     position: relative;
 }
 
-.user-name::before, .user-name::after {
+.user-name-name {
+    color: var(--basic-black);
+    padding: 0 0 0 57px;
+}
+
+.user-name-img,  .logout-img{
+    position: absolute;
+    bottom: 14px;
+    width: 20px;
+    height: 17px;
+    /* background-image: url("../img/small-icons/icon-user.svg") */
+}
+
+.user-name-img {
+    left: 15px;
+    background-image: url("../img/small-icons/icon-user.svg")
+}
+
+.logout-img {
+    left: 262px;
+    background-image: url("../img/small-icons/icon-logout.svg")
+}
+
+.logout-img:hover {
+    background-image: url("../img/small-icons/icon-logout-hov.svg")
+}
+
+.user-name-name:hover .user-name-img {
+    background-image: url("../img/small-icons/icon-user-hov.svg")
+}
+
+/* .user-name::before, .user-name::after {
     content: "";
     position: absolute;
     bottom: 14px;
@@ -1478,7 +1510,7 @@
 .user-name::after {
     left: 262px;
     background-image: url("../img/small-icons/icon-logout.svg")
-}
+} */
 
 
 .login-link {
@@ -1487,7 +1519,7 @@
     position: relative;
 }
 
-.login-link::before {
+/* .login-link::before {
     content: "";
     position: absolute;
     background-image: url("../img/small-icons/icon-login.svg");
@@ -1495,7 +1527,21 @@
     height: 17px;
     bottom: 14px;
     left: 19px;
+} */
+
+.login-link-img {
+    position: absolute;
+    background-image: url("../img/small-icons/icon-login.svg");
+    width: 20px;
+    height: 17px;
+    bottom: 14px;
+    left: 19px;
 }
+
+.login-link:hover .login-link-img {
+    background-image: url("../img/small-icons/icon-login-hov.svg")
+}
+
 
 .registration-link {
     padding: 12px 24px;
