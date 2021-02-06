@@ -932,10 +932,6 @@
 
 /* breadcrumbs */
 
-.breadcrumbs-list {
-    margin-bottom: 20px;
-}
-
 .breadcrumbs-list a{
     color: var(--basic-black);
 }
@@ -1927,12 +1923,30 @@
     box-sizing: border-box;
 }
 
+
 .breadcrumbs-list {
+    margin-bottom: 20px;
     display: flex;
+    padding: 0;
 }
 
 .breadcrumbs-item {
     margin-right: 40px;
+    position: relative;
+}
+
+.breadcrumbs-item:last-child {
+    margin-right: 0;
+}
+
+.breadcrumbs-item:not(:first-child)::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 12px;
+    top: 3px;
+    left: -22px;
+    background-image: url("../img/small-icons/icon-arrow.svg")
 }
 
 
