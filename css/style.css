@@ -1773,11 +1773,11 @@
 
 /* !!! первый вариант добавления уголка NEW !!! */
 
-.products-item-new {
+.item-new {
     position: relative;
 }
 
-.products-item-new::after {
+.item-new::after {
     position: absolute;
     content: "";
     width: 67px;
@@ -1789,7 +1789,7 @@
 }
 
 /* !!! второй вариант добавления уголка NEW !!! */
-.products-item-new1 {
+.item-new1 {
     position: relative;
 }
 
