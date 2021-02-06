@@ -275,6 +275,38 @@
     background-color: var(--red-error);
 }
 
+
+
+.button-arrange, .button-bookmark, .button-cart, .header-search {
+    box-sizing: border-box;
+    height: 42px;
+    position: relative;
+}
+
+.button-arrange, .button-bookmark, .button-cart {
+    width: 150px;
+    text-align: center; 
+    
+}
+
+
+.header-search-img {
+    position: absolute;
+    top: 12px;
+    left: 17px;
+    width: 17px;
+    height: 17px;
+    background-image: url("../img/small-icons/icon-search.svg");
+    opacity: .5;
+    z-index: 1;
+}
+
+.header-search input {
+    padding-left: 42px;
+    width: 100%;
+    height: 42px;
+}
+
 .search {
     background-color: var(--basic-extra-dark);
     color: var(--basic-white);
@@ -285,6 +317,13 @@
     color: var(--basic-black)
 }
 
+.header-search:hover .header-search-img {
+    opacity: 1;
+}
+
+.header-search input:focus + .header-search-img {
+    background-image: url("../img/small-icons/icon-search-red.svg");
+}
 
 .button-cart:active,
 .button-bookmark:active {
@@ -308,16 +347,6 @@
     padding-top: 9px;
 }
 
-.button-arrange, .button-bookmark, .button-cart, .search {
-    box-sizing: border-box;
-    height: 42px;
-}
-
-.button-arrange, .button-bookmark, .button-cart {
-    width: 150px;
-    text-align: center; 
-    position: relative;
-}
 
 .button-bookmark {
     padding-left: 20px;
