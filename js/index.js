@@ -92,7 +92,6 @@ services.forEach((serv, i) => {
     allDisactivate();
     serv.classList.remove('services-item-disactive');
     serv.classList.add('services-item-active');
-
     headerService.textContent = serv.textContent;
     textService.innerHTML = srviceTexts[i];
     srviceImgClases.forEach(clas => serviceImg.classList.remove(clas))
@@ -106,14 +105,20 @@ services.forEach((serv, i) => {
 })
 
 
-// const writeUs = document.getElementById('write_us');
-// const modalCalling = document.querySelector('.modal_calling');
-// const closeModalBtn = modalCalling.querySelector('.close_basket')
+// modals
+
+const writeUs = document.getElementById('write-us');
+const modalLogin = document.querySelector('.modal-login');
+const closeModalBtn = modalLogin.querySelector('.modal-close');
 
 
-// writeUs.addEventListener('click', evt => {
-//   evt.preventDefault();
-//   modalCalling.parentNode.style.display = 'flex';
-// })
+writeUs.addEventListener('click', evt => {
+  evt.preventDefault();
+  modalLogin.parentNode.style.display = 'flex';
+})
+
+closeModalBtn.addEventListener('click', () => {
+  modalLogin.parentNode.style.display = 'none';
+})
 
 // closeModalBtn.onclick = () => modalCalling.parentNode.style.display = 'none';
