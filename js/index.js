@@ -1,7 +1,9 @@
+// PROMO_SLIDER
+
 const dots = document.querySelectorAll('.slider-dot-item');
 const arrowLeft = document.querySelector('.slider-arrow-left');
 const arrowRight = document.querySelector('.slider-arrow-right');
-const slide = document.querySelector(".promo-slide-img img");
+const promoSlide = document.querySelector(".promo-slide-img img");
 const sliderHeaderCurent = document.querySelector(".promo-slide-name");
 const sliderTextCurent = document.querySelector(".promo-slide-description");
 
@@ -20,14 +22,12 @@ const sliderTexts = [
 ]
 let slideId = 0
 
-
-
 const changeSlide = (num) => {
   dots.forEach(dot => {
     dot.classList.remove("slider-dot-active");
   });
   dots[num].classList.add("slider-dot-active");
-  slide.setAttribute('src', sliderImgSrc[num])
+  promoSlide.setAttribute('src', sliderImgSrc[num])
   sliderHeaderCurent.textContent = sliderHeaders[num];
   sliderTextCurent.textContent = sliderTexts[num];
 
@@ -49,7 +49,20 @@ arrowLeft.addEventListener('click', () => {
     slideId = sliderImgSrc.length - 1;
   };
   changeSlide(slideId);
+});
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', (evt) => {
+    if (evt.target == dot) changeSlide(i);
+    
+  })
 })
+
+
+
+
+
+
 
 const srviceTexts = [
   'Мы с удовольствием доставим ваш товар прямо <br />к вашему подъезду совершенно бесплатно!<br />Ведь мы неплохо заработаем, <br />поднимая его на ваш этаж!',
