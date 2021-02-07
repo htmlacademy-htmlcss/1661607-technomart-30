@@ -319,7 +319,6 @@
 }
 
 .button-arrange, .button-bookmark, .button-cart {
-    width: 150px;
     text-align: center; 
 }
 
@@ -368,6 +367,7 @@
 }
 
 .button-arrange {
+    width: 150px;
     background-color: var(--basic-green);
 }
 
@@ -381,10 +381,12 @@
 }
 
 .button-bookmark {
+    width: 156px;
     padding-left: 20px;
 }
 
 .button-cart {
+    width: 136px;
     padding-left: 10px;
 }
 
@@ -416,6 +418,9 @@
     opacity: .5;
 }
 
+.header-something-inside {
+    background-color: var(--basic-red);
+}
 
 /* main-header-center */
 
