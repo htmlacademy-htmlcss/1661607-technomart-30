@@ -401,6 +401,10 @@
 }
 
 .button-bookmark-img {
+    left: 23px;
+}
+
+.button-bookmark-img {
     background-image: url("../img/small-icons/icon-bookmark.svg");
 }
 
@@ -1270,10 +1274,11 @@
 
 .footer-top-item {
     display: grid;
-    grid-template-columns: 5fr 7fr;
+    grid-template-columns: 10fr 19fr; /* еле подобрал */
+    /* grid-template-columns: 5fr 7fr; */
 }
 
-.footer-main-navigation {
+/* .footer-main-navigation {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 40px;
@@ -1281,9 +1286,28 @@
     margin: 0;
     margin-left: -10px;
     padding: 37px 0 34px;
+} */
+
+.footer-main-navigation, .footer-secondary-navigation {
+    display: flex;
+    align-items: flex-end; 
+    margin: 0;
+}
+
+.footer-nav-item {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-main-navigation {
+    padding-left: 0;
 }
 
 .footer-secondary-navigation {
+    padding: 27px 0 74px 20px;
+}
+
+/* .footer-secondary-navigation {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 40px;
@@ -1291,7 +1315,7 @@
     margin: 0;
     margin-left: 10px;
     padding: 28px 0 74px;
-}
+} */
 
 
 /* footer-bottom */
@@ -1309,7 +1333,8 @@
 .social-list {
     display: flex;
     justify-content: center;
-    padding: 0 36px 0 0;
+    padding: 0 40px 0 0;
+    margin: 0;
 }
 
 .web-contacts-list {
@@ -1375,14 +1400,27 @@
     opacity: .5;
 }
 
+.social-item {
+    width: 44px;
+    height: 44px;
+    padding: 1px;
+    box-sizing: border-box;
+    margin-right: 1px;
+}
+
+.social-item:last-child {
+    margin-right: 0;
+}
+
 .social-button {
     display: inline-block;
-    height: 44px;
-    width: 44px;
+    height: 41px;
+    width: 41px;
     border-radius: 50%;
     background-color: var(--dark-ultra);
     background-position: center center;
     background-repeat: no-repeat;
+    /* margin-right: 3px; */
 }
 
 .social-button-vk {
