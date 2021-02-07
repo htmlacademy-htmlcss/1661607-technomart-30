@@ -927,6 +927,7 @@
     align-items: center;
 }
 
+
 .products-item {
     text-align: center;
     font-family: "PT Sans", "Arial", sans-serif;
@@ -2010,6 +2011,7 @@
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .buy-prod {
