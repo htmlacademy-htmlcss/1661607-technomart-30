@@ -30,7 +30,6 @@ const changeSlide = (num) => {
   promoSlide.setAttribute('src', sliderImgSrc[num])
   sliderHeaderCurent.textContent = sliderHeaders[num];
   sliderTextCurent.textContent = sliderTexts[num];
-
 }
 
 arrowRight.addEventListener('click', () => {
@@ -54,31 +53,28 @@ arrowLeft.addEventListener('click', () => {
 dots.forEach((dot, i) => {
   dot.addEventListener('click', (evt) => {
     if (evt.target == dot) changeSlide(i);
-    
   })
 })
 
+
 // services-slider
-
-
-
-
 
 const srviceTexts = [
   'Мы с удовольствием доставим ваш товар прямо <br />к вашему подъезду совершенно бесплатно!<br />Ведь мы неплохо заработаем, <br />поднимая его на ваш этаж!',
   'Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.',
   'Залезть в долговую яму стало проще! <br />Кредитные консультанты придут вам на помощь.'
 ]
-
-const srviceImgClases = ['service-img-truck', 'service-img-garant', 'service-img-credit'];
+const srviceImgClases = [
+  'service-img-truck', 
+  'service-img-garant', 
+  'service-img-credit'
+];
 
 const services = document.querySelectorAll('.services-item');
 const headerService = document.querySelector('.service-description h3');
 const textService = document.querySelector('.service-description p');
 const serviceImg = document.querySelector('.service-img');
-
 const buttonCredit = document.querySelector('.button-credit');
-
 
 const allDisactivate = () => {
   services.forEach(service => {
@@ -107,18 +103,39 @@ services.forEach((serv, i) => {
 
 // modals
 
+//!!! 
+// при открытии любого модального окна, страница дергается, наверно, из-за ползунка. Будет время, разберусь - поправлю 
+// !!!
+
+function openModal(modalForOpen, btnForOpen) {
+  btnForOpen.addEventListener('click', evt => {
+    evt.preventDefault();
+    modalForOpen.parentNode.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  })
+}
+
+function closeModal(modalForClose, btnForClose) {
+  btnForClose.addEventListener('click', () => {
+    modalForClose.parentNode.style.display = 'none';
+    document.body.style.overflow = '';
+  })
+}
+
+// login modal
+
 const writeUs = document.getElementById('write-us');
 const modalLogin = document.querySelector('.modal-login');
-const closeModalBtn = modalLogin.querySelector('.modal-close');
+const closeModalLogin = modalLogin.querySelector('.modal-close');
 
+openModal(modalLogin, writeUs);
+closeModal(modalLogin, closeModalLogin);
 
-writeUs.addEventListener('click', evt => {
-  evt.preventDefault();
-  modalLogin.parentNode.style.display = 'flex';
-})
+// map modal
 
-closeModalBtn.addEventListener('click', () => {
-  modalLogin.parentNode.style.display = 'none';
-})
+const mapButton = document.querySelector('.company-location-img');
+const modalMap = document.querySelector('.modal-map');
+const closeModalMap = modalMap.querySelector('.modal-close');
 
-// closeModalBtn.onclick = () => modalCalling.parentNode.style.display = 'none';
+openModal(modalMap, mapButton);
+closeModal(modalMap, closeModalMap);
