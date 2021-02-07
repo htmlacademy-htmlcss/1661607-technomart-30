@@ -224,6 +224,7 @@
 
 .button-credit {
     background-color: var(--red-light);
+    margin-top: 26px;
     display: none;
 }
 

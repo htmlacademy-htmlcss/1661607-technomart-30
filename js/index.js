@@ -58,7 +58,7 @@ dots.forEach((dot, i) => {
   })
 })
 
-
+// services-slider
 
 
 
@@ -70,23 +70,40 @@ const srviceTexts = [
   'Залезть в долговую яму стало проще! <br />Кредитные консультанты придут вам на помощь.'
 ]
 
-// const srviceImgClases = ['serv_img0', 'serv_img1', 'serv_img2']
+const srviceImgClases = ['service-img-truck', 'service-img-garant', 'service-img-credit'];
 
-// const services = document.querySelectorAll('.serv-items');
-// const headerServ = document.querySelector('.text_services h3')
-// const textServPar = document.querySelector('.text_services p')
-// const servImg = document.querySelector('.services_img')
+const services = document.querySelectorAll('.services-item');
+const headerService = document.querySelector('.service-description h3');
+const textService = document.querySelector('.service-description p');
+const serviceImg = document.querySelector('.service-img');
 
-// services.forEach((serv, i) => {
-//   serv.addEventListener('click', () => {
-//     services.forEach(s => s.classList.remove('serv-items-active'));
-//     serv.classList.add('serv-items-active');
-//     headerServ.textContent = serv.textContent;
-//     textServPar.innerHTML = srviceTexts[i];
-//     srviceImgClases.forEach(clas => servImg.classList.remove(clas))
-//     servImg.classList.add(srviceImgClases[i]);
-//   });
-// })
+const buttonCredit = document.querySelector('.button-credit');
+
+
+const allDisactivate = () => {
+  services.forEach(service => {
+    service.classList.remove('services-item-active');
+    service.classList.add('services-item-disactive');
+  })
+}
+
+services.forEach((serv, i) => {
+  serv.addEventListener('click', () => {
+    allDisactivate();
+    serv.classList.remove('services-item-disactive');
+    serv.classList.add('services-item-active');
+
+    headerService.textContent = serv.textContent;
+    textService.innerHTML = srviceTexts[i];
+    srviceImgClases.forEach(clas => serviceImg.classList.remove(clas))
+    serviceImg.classList.add(srviceImgClases[i]);
+    if (serv.textContent === "Кредит") {
+      buttonCredit.style.display = "block";
+    } else {
+      buttonCredit.style.display = "none";
+    }
+  });
+})
 
 
 // const writeUs = document.getElementById('write_us');
