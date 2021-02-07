@@ -933,19 +933,29 @@
     font-weight: 700;
     font-size: 17px;
     line-height: 18px;
+    width: 220px;
     border: 1px solid var(--light-1);
     box-sizing: border-box;
+
+    display: grid;
+    grid-template-rows: min-content auto 31px 59px;
+    min-height: 315px; 
 }
-
-
-
-.products-item a {
+/* 
+.products-item-wrap {
     display: grid;
     grid-template-rows: min-content auto 31px 59px;
     width: 218px;
-    min-height: 315px;
-    
-}
+    min-height: 315px; 
+} */
+
+
+/* .products-item a {
+    display: grid;
+    grid-template-rows: min-content auto 31px 59px;
+    width: 218px;
+    min-height: 315px; 
+} */
 
 .products-item:hover {
     box-shadow: 0px 4px 20px var(--black-opacity-15);
