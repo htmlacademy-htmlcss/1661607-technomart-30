@@ -807,6 +807,24 @@
     box-sizing: border-box;
 }
 
+.slider-arrow-left, .slider-arrow-right {
+    position: absolute;
+    background-image: url("../img/arrows/arrow-left-slider.svg");
+    width: 20px;
+    height: 40px;
+    top: 125px;
+    cursor: pointer;
+}
+
+.slider-arrow-left{
+    left: 25px; 
+}
+
+.slider-arrow-right {
+    transform: rotate(180deg);
+    right: 25px; 
+}
+
 .promo-slide-name {
     font-family: "Cuprum", "Arial", sans-serif;
     font-weight: bold;
@@ -1841,13 +1859,14 @@
 /* modals */
 
 .modal-wrapper {
-    /* position:fixed; */
+    position:fixed;
     display: flex;
     /* display: none; */
     align-items:center;
     justify-content:center;
     top:0px;
-    left:0px;
+    /* left:0px; */
+    right: 6px;
     width:100vw;
     height:100vh;
 }
@@ -1855,6 +1874,7 @@
 .modal {
     border-top: 7px solid var(--basic-red);
     position: relative;
+    
 }
 
 .modal-close {
@@ -1946,6 +1966,7 @@
     height: 449px;
     width: 940px;
     background-color: var(--basic-gray);
+    box-shadow: 0px 0px 14.7px rgba(47, 42, 43, 0.5);
 }
 
 
@@ -1953,6 +1974,7 @@
 
 .modal-added {
     height: 282px;
+    box-shadow: 0px 4px 20px var(--black-opacity-15);
 }
 
 .modal-added-header {

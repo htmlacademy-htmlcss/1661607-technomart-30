@@ -101,7 +101,8 @@
       </div>
       <div class="promo-slider">
         <div class="promo-slide">
-          <!-- если поверить, что бош на обоих слайдах - совпадение, а не реклама, тогда можно сослать в bg-image -->
+          <div class="slider-arrow-left"></div>
+          <div class="slider-arrow-right"></div>
           <div class="promo-slide-text">
             <h3 class="promo-slide-name">ПЕРФОРАТОРЫ</h3>
             <p class="promo-slide-description for-item-text">Настоящие мужские игрушки</p>
@@ -245,6 +246,10 @@
         </ul>
 
         <div class="service-description">
+
+          <!-- !!!
+            тут БАГ - сквозь модальные окна почему-то просвечивает следущие .header-text и .paragraph.  Можно, конечно поставить оверфлов и не дать прокрутить до них, но хотелось бы понять - почему
+            !!!  -->
           <h3 class="header-text">Доставка</h3>
           <p class="paragraph">
             Мы с удовольствием доставим ваш товар прямо <br />
@@ -378,7 +383,7 @@
     </div>
   </footer>
 
-  <section class="modal-wrapper">
+  <!-- <section class="modal-wrapper">
     <div class="modal modal-login for-item-text">
       <h2 class="visually-hidden">Отправка письма</h2>
       <form method="POST" action="#">
@@ -404,9 +409,9 @@
         <button class="modal-close modal-close-login" type="button"></button>
       </form>
     </div>
-  </section>
+  </section> -->
 
-  <section class="modal-wrapper">
+  <!-- <section class="modal-wrapper">
     <div class="modal modal-map">
       <h2 class="visually-hidden">Map</h2>
       <div class="modal-big-map">
@@ -415,7 +420,7 @@
       </div>
       <button class="modal-close modal-close-map" type="button"></button>
     </div>
-  </section>
+  </section> -->
 
 </body>
 
