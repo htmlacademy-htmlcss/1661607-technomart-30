@@ -106,12 +106,16 @@ services.forEach((serv, i) => {
 //!!! 
 // при открытии любого модального окна, страница дергается, наверно, из-за ползунка. Будет время, разберусь - поправлю 
 // !!!
+const scrollWidth = getScrollWidth();
+
 
 function openModal(modalForOpen, btnForOpen) {
   btnForOpen.addEventListener('click', evt => {
     evt.preventDefault();
     modalForOpen.parentNode.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    document.body.style.marginRight = `${scrollWidth}px`;
+    console.log(document.body.style.marginRight);
   })
 }
 
@@ -119,6 +123,8 @@ function closeModal(modalForClose, btnForClose) {
   btnForClose.addEventListener('click', () => {
     modalForClose.parentNode.style.display = 'none';
     document.body.style.overflow = '';
+    document.body.style.marginRight = 0;
+    console.log(document.body.style.marginRight);
   })
 }
 
@@ -139,3 +145,23 @@ const closeModalMap = modalMap.querySelector('.modal-close');
 
 openModal(modalMap, mapButton);
 closeModal(modalMap, closeModalMap);
+
+
+// убрать дерганье модального окна от скрола
+
+function getScrollWidth() {
+  const div = document.createElement('div');
+  div.style.overflowY = 'scroll';
+  div.style.width = '50px';
+  div.style.height = '50px';
+  div.style.visibility = 'hidden';
+  document.body.appendChild(div);
+  const scrollWidth = div.offsetWidth - div.clientWidth;
+  div.remove();
+  return scrollWidth;
+}
+
+
+
+
+

@@ -1,10 +1,13 @@
 // не знаю как экспортировать без сборщиков, поэтому просто скопировал из index.js
+const scrollWidth = getScrollWidth();
 
 function openModal(modalForOpen, btnForOpen) {
     btnForOpen.addEventListener('click', evt => {
       evt.preventDefault();
       modalForOpen.parentNode.style.display = 'flex';
       document.body.style.overflow = 'hidden';
+      document.body.style.marginRight = `${scrollWidth}px`;
+      console.log(document.body.style.marginRight);
 
       //добавка
       counterBuy++;
@@ -17,6 +20,8 @@ function openModal(modalForOpen, btnForOpen) {
     btnForClose.addEventListener('click', () => {
       modalForClose.parentNode.style.display = 'none';
       document.body.style.overflow = '';
+      document.body.style.marginRight = 0;
+      console.log(document.body.style.marginRight);
     })
   }
 
@@ -72,7 +77,7 @@ catds.forEach(card => {
     })
 })
 
-
+// вешаем события на кнопку купить и на остальные 3 кнопки - закрыть.
 function addTooCart(elem) {
     const addedButton = elem.querySelector('.buy-prod');
     openModal(modalAdded, addedButton);
@@ -82,5 +87,17 @@ function addTooCart(elem) {
 }  
 
 
+// убрать дерганье модального окна от скрола
 
+function getScrollWidth() {
+  const div = document.createElement('div');
+  div.style.overflowY = 'scroll';
+  div.style.width = '50px';
+  div.style.height = '50px';
+  div.style.visibility = 'hidden';
+  document.body.appendChild(div);
+  const scrollWidth = div.offsetWidth - div.clientWidth;
+  div.remove();
+  return scrollWidth;
+}
 
