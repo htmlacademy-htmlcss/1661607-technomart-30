@@ -262,7 +262,7 @@
 
  .main-header {
     display: grid;
-    grid-template-rows: 42px 1fr 60px;
+    grid-template-rows: 42px 1fr auto;
 
     padding-bottom: 60px;
     background-color: var(--basic-light);
@@ -670,6 +670,7 @@
 
 .header-navigation-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 0;
     margin: 0;
@@ -682,7 +683,7 @@
 
 .header-navigation-list a {
     display: block;
-    padding: 18px 0;
+    padding: 18px 10px;
 }
 
 
