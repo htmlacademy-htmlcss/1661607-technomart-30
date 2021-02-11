@@ -372,6 +372,7 @@
     color: var(--white-half);
 }
 
+.button-cart:active,
 .button-bookmark:active {
     background-color: var(--dark-3);
 }
@@ -1340,6 +1341,7 @@
 
 .social-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 0 40px 0 0;
     margin: 0;
@@ -1347,6 +1349,7 @@
 
 .web-contacts-list {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
 }
@@ -1428,7 +1431,6 @@
     background-color: var(--dark-ultra);
     background-position: center center;
     background-repeat: no-repeat;
-    /* margin-right: 3px; */
 }
 
 .social-button-vk {
@@ -1494,6 +1496,7 @@
 
 .breadcrumbs-list {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 20px;
     padding: 0;
 }
@@ -1507,13 +1510,13 @@
     margin-right: 0;
 }
 
-.breadcrumbs-item:not(:first-child)::before {
+.breadcrumbs-item:not(:last-child)::before {
     position: absolute;
     content: "";
     width: 8px;
     height: 12px;
     top: 3px;
-    left: -22px;
+    right: -22px;
     background-image: url("../img/small-icons/icon-arrow.svg")
 }
 
@@ -1685,7 +1688,7 @@
     grid-template-columns: repeat(9, 1fr);
     column-gap: 20px;
 
-    height: 38px;
+    min-height: 38px;
     margin: 0;
     margin-bottom: 28px;
     padding: 10px 14px 10px 19px;
@@ -1701,8 +1704,13 @@
 .sort-by-list {
     grid-column: 4 / 9;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 10px 0 0;
+}
+
+.sort-by-list li{
+    max-height: 18px;
 }
 
 .order-by-list {
@@ -1770,16 +1778,18 @@
 
 .pagination {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 3fr;
+    column-gap: 20px
 }
 
 
 .pages-list {
     grid-column: 2 / 5;
-
     display: flex;
-    padding: 5px 0 0;
-    margin: 0 0 59px;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: 0 0 54px;
+    
 }
 
 .pages-item {
@@ -1790,6 +1800,7 @@
     padding-top: 10px;
     margin: 0;
     margin-right: 10px;
+    margin-bottom: 5px;
     border: 1px solid var(--gray-4);
     box-sizing: border-box;
     border-radius: 2px;
