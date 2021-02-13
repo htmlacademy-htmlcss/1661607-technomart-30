@@ -329,6 +329,7 @@
     text-align: center; 
 }
 
+
 .search {
     position: relative;
     padding-left: 42px;
@@ -380,6 +381,7 @@
     background-image: url("../img/small-icons/icon-search-red.svg");
     opacity: 1;
 }
+
 
 .button-cart:active,
 .button-bookmark:active {
@@ -923,11 +925,13 @@
     font-weight: 400;
     text-transform: uppercase;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.promo-item-description {
+/* .promo-item-description {
     margin: auto;
-}
+} */
 
 .promo-button:hover {
     background-color: var(--basic-gray);
