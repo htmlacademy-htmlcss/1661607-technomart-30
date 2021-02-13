@@ -526,7 +526,30 @@
       <button class="modal-close modal-close-map" type="button"></button>
     </div>
   </section>
-<script src="js/index.js"></script>
+
+  <section class="modal-wrapper">
+    <div class="modal modal-added">
+      <div class="modal-added-header">
+        <h2 class="modal-added-text">Товар добавлен в корзину!</h2>
+      </div>
+
+      <div class="modal-buttons">
+        <button class="button button-buy" id="buy" type="button">Оформить заказ</button>
+        <button class="modal-button-continue button" type="button">Продолжить покупки</button>
+      </div>
+      <button type="button" class="modal-close modal-close-add"></button>
+    </div>
+  </section>
+
+  <template id="buy-and-bookmark">
+    <div class="image-to-buy">
+      <button type="button" class="buy-prod">купить</button>
+      <button type="button" class="bookmark-prod">в закладки</button>
+    </div>
+  </template>
+
+<!-- <script src="js/index.js"></script> -->
+<script src="js/script.js"></script>
 </body>
 
 </html>
