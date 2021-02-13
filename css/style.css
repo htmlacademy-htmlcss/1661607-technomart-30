@@ -68,6 +68,8 @@
     --basic-dark-opacity: rgba(50,66,92, 0.5);
     --basic-extra-dark: #293449;
     --dark-ultra: #212A3A;
+    
+    --svg-icon-hover: #3D546F;
    
     --dark-1: #405069;
     --dark-2: #1D2739;
@@ -196,12 +198,16 @@
 
 .visually-hidden {
     position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
-
 
 /* buttons */
 
@@ -538,37 +544,28 @@
 }
 
 
-.user-name-img,  .logout-img{
+.user-name-img, .logout{
     position: absolute;
     bottom: 14px;
-    width: 20px;
-    height: 17px;
+    height: 18px;
 }
 
 .user-name-img {
     left: 15px;
-    background-image: url("../img/small-icons/icon-user.svg")
 }
 
-.logout-img {
+.logout {
     left: 262px;
-    background-image: url("../img/small-icons/icon-logout.svg")
 }
 
-.logout-img:hover {
-    background-image: url("../img/small-icons/icon-logout-hov.svg")
+.user-name-name:hover path,
+.logout-img:hover path {
+    fill: var(--svg-icon-hover);
 }
 
-.logout-img:active {
-    background-image: url("../img/small-icons/icon-logout.svg")
-}
-
-.user-name-name:hover .user-name-img {
-    background-image: url("../img/small-icons/icon-user-hov.svg")
-}
-
-.user-name-name:active .user-name-img {
-    background-image: url("../img/small-icons/icon-user.svg")
+.user-name-name:active path,
+.logout-img:active path {
+    fill: var(--basic-gray);
 }
 
 .login-link {
@@ -579,20 +576,18 @@
 
 .login-link-img {
     position: absolute;
-    background-image: url("../img/small-icons/icon-login.svg");
-    width: 20px;
-    height: 17px;
     bottom: 14px;
     left: 19px;
 }
 
-.login-link:hover .login-link-img {
-    background-image: url("../img/small-icons/icon-login-hov.svg")
+.login-link:hover path {
+    fill: var(--svg-icon-hover);
 }
 
-.login-link:active .login-link-img {
-    background-image: url("../img/small-icons/icon-login.svg");
+.login-link:active path {
+    fill: var(--basic-gray);
 }
+
 
 .registration-link {
     padding: 12px 24px;
@@ -632,7 +627,6 @@
 
 .login-link:hover,
 .registration-link:hover,
-.user-name-name:hover,
 .user-orders:hover,
 .user-cabinet:hover {
     color: var(--basic-red);
@@ -655,10 +649,6 @@
      box-shadow: inset 0px -5px 0px var(--basic-extra-dark);
      padding: 0 26px;
  }
-
-.main-header-navigation a {
-    color: var(--basic-white);
-}
 
 .main-header-navigation a:hover {
     background-color: var(--basic-extra-dark);
@@ -685,6 +675,7 @@
 .header-navigation-list a {
     display: block;
     padding: 18px 10px;
+    color: var(--basic-white);
 }
 
 
