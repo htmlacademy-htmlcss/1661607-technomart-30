@@ -135,7 +135,7 @@
 .header-text {
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
@@ -147,7 +147,7 @@
     font-family: "Cuprum", "Arial", sans-serif;
     color: var(--basic-white);
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     margin: 0;
@@ -156,7 +156,7 @@
 .sub-text {
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-white);
@@ -166,7 +166,7 @@
 .paragraph {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 13px;
     line-height: 24px;
     color: var(--basic-black);
@@ -176,7 +176,7 @@
 .subtitle-text {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
@@ -187,7 +187,7 @@
 .form-value-text {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 15px;
     line-height: 19px;
     text-transform: uppercase;
@@ -489,7 +489,7 @@
     font-size: 21px;
     line-height: 30px;
     color: var(--basic-red);
-    font-weight: bold;
+    font-weight: 700;
     width: 270px;
     height: 45px;
     border: 3px solid var(--basic-white);
@@ -841,7 +841,7 @@
 
 .promo-slide-name {
     font-family: "Cuprum", "Arial", sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 36px;
     line-height: 36px;
     padding-top: 23px;
@@ -929,10 +929,6 @@
     justify-content: center;
 }
 
-/* .promo-item-description {
-    margin: auto;
-} */
-
 .promo-button:hover {
     background-color: var(--basic-gray);
 }
@@ -976,28 +972,14 @@
     grid-template-rows: min-content auto 31px 59px;
     min-height: 315px; 
 }
-/* 
-.products-item-wrap {
-    display: grid;
-    grid-template-rows: min-content auto 31px 59px;
-    width: 218px;
-    min-height: 315px; 
-} */
 
-
-/* .products-item a {
-    display: grid;
-    grid-template-rows: min-content auto 31px 59px;
-    width: 218px;
-    min-height: 315px; 
-} */
 
 .products-item:hover {
     box-shadow: 0px 4px 20px var(--black-opacity-15);
 }
 
 .products-item h3 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     line-height: 20px;
     color: var(--basic-black);
@@ -1159,7 +1141,7 @@
     padding: 14px 0 17px 22px;
     margin: 0;
     font-family: "PT Sans", "Arial", sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 21px;
     line-height: 30px;
     color: var(--basic-white);
@@ -1564,7 +1546,7 @@
 .filtres legend {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 17px;
     line-height: 30px;
     text-transform: uppercase;
@@ -1583,7 +1565,7 @@
 .range-price {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 17px;
     line-height: 18px;
     display: flex;
@@ -1599,7 +1581,7 @@
 .filter-button {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
@@ -2031,7 +2013,7 @@
 .modal-added-text {
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 24px;
     line-height: 30px;
     text-align: center;
@@ -2060,7 +2042,7 @@
     width: 135px;
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
