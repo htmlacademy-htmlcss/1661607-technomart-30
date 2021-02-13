@@ -1608,6 +1608,15 @@
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
+    
+}
+
+.forms label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 35px;
 }
 
 .range-prices {
@@ -1655,15 +1664,67 @@
     margin-bottom: 15px;
 }
 
-.filter-radio {
+.filter-checkbox + label::before {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    top: -2px;
+    background-image: url("../img/check-and-radio/checkbox-off.svg");
+    width: 23px;
+    height: 23px;
+    opacity: 0.8;
+}
+
+.filter-checkbox:hover + label::before {
+    opacity: 1;
+}
+
+.filter-checkbox:checked + label::before {
+    width: 26px;
+    background-image: url("../img/check-and-radio/checkbox-on.svg");
+}
+
+.filter-radios {
     padding: 0;
     margin-bottom: 34px;
 }
 
-.filter-radio legend {
+.filter-radios legend {
     padding-top: 18px;
     margin-bottom: 21px;
 }
+
+.filter-radio + label::before {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 25px;
+    height: 25px;
+    opacity: 0.8;
+    border: 4px solid var(--basic-gray);
+    border-radius: 50%;
+    box-sizing: border-box;
+    opacity: 0.8;
+}
+
+.filter-radio:checked + label::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    top: 4px;
+    left: 8px;
+    width: 9px;
+    height: 9px;
+    opacity: 0.8;
+    background-color: var(--basic-gray);
+    border-radius: 50%;
+}
+
+.filter-radio:hover + label::before,
+.filter-radio:hover + label::after {
+    opacity: 1;
+}  
 
 
 /* sorting */
