@@ -407,36 +407,37 @@
     padding-left: 10px;
 }
 
-.button-bookmark-img,
-.button-cart-img  {
+.button-bookmark::before,
+.button-cart::before  {
+    content: "";
     position: absolute;
     width: 15px;
     height: 15px;
     top: 13px;
     left: 13px;
-    opacity: .5;
+    opacity: .3;
 }
 
-.button-bookmark-img {
+.button-bookmark::before {
     left: 23px;
 }
 
-.button-bookmark-img {
+.button-bookmark::before {
     background-image: url("../img/small-icons/icon-bookmark.svg");
 }
 
-.button-cart-img {
+.button-cart::before {
     background-image: url("../img/small-icons/icon-cart.svg");
 }
 
-.button-bookmark:hover .button-bookmark-img,
-.button-cart:hover .button-cart-img {
+.button-bookmark:hover::before,
+.button-cart:hover::before {
     opacity: 1;
 }
 
-.button-bookmark:active .button-bookmark-img,
-.button-cart:active .button-cart-img {
-    opacity: .5;
+.button-bookmark:active::before,
+.button-cart:active::before {
+    opacity: 0.3;
 }
 
 .header-something-inside {
@@ -587,7 +588,6 @@
 .login-link:active path {
     fill: var(--basic-gray);
 }
-
 
 .registration-link {
     padding: 12px 24px;
