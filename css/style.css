@@ -2049,6 +2049,7 @@
     border: none;
     cursor: pointer;
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .buy-prod {
@@ -2069,9 +2070,11 @@
 
 .bookmark-prod {
     border: 3px solid var(--basic-green);
+    background-color: var(--basic-white);
 }
 
 .bookmark-prod:hover {
+    
     border-color: var(--basic-dark);
 }
 
