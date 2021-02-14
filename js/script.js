@@ -32,6 +32,10 @@ const sliderTexts = [
   "Настоящие мужские игрушки", 
   "Соседям на радость!"
 ]
+const slideAlt = [
+  "Слайд: Перфоратор Бош",
+  "Слайд: Дрель Бош"
+]
 let slideId = 0
 
 const changeSlide = (num) => {
@@ -39,7 +43,8 @@ const changeSlide = (num) => {
     dot.classList.remove("slider-dot-active");
   });
   dots[num].classList.add("slider-dot-active");
-  promoSlide.setAttribute('src', sliderImgSrc[num])
+  promoSlide.setAttribute('src', sliderImgSrc[num]);
+  promoSlide.setAttribute('alt', slideAlt[num]);
   sliderHeaderCurent.textContent = sliderHeaders[num];
   sliderTextCurent.textContent = sliderTexts[num];
 }
