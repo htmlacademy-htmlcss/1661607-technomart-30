@@ -26,17 +26,17 @@
           </div>
 
           <form method="get" action="https://echo.htmlacademy.ru" class="header-search">
-            <input class="search" type="search" name="search" placeholder="Поиск" />
+            <input class="search" type="search" name="search" placeholder="Поиск " />
             <button class="button-search" type="submit"></button>
           </form>
 
           <a class="button-bookmark" href="#">
-            Закладки:
+            Закладки:&nbsp;
             <span class="button-bookmark-num">0</span>
           </a>
 
           <a class="button-cart" href="#">
-            Корзина:
+            Корзина:&nbsp;
             <span class="button-cart-num">0</span>
           </a>
           <a class="button-arrange" href="#">Оформить заказ</a>
@@ -57,12 +57,13 @@
       </p>
       <div class="login-reg">
         <a href="#" class="login-link">
-          <svg width="21" height="17" viewBox="0 0 21 17" fill="none" 
-          class="login-link-img"
-          xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z" fill="#C5C5C5"/>
-            <path d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z" fill="#C5C5C5"/>
-            </svg>
+          <svg width="21" height="17" viewBox="0 0 21 17" fill="none" class="login-link-img"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z" fill="#C5C5C5" />
+            <path
+              d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z"
+              fill="#C5C5C5" />
+          </svg>
           Войти
         </a>
         <a href="#" class="registration-link">Регистрация</a>
@@ -124,9 +125,9 @@
             <li class="slider-dot-item"></li>
           </ul>
           <a class="promo-slide-button button" href="catalog.html">Открыть каталог</a>
-          <div class="promo-slide-img">
-            <img src="img/slides/slide-perforator.jpg" alt="Слайд: Перфоратор Бош" width="620" height="266" />
-          </div>
+          <img src="img/slides/slide-perforator.jpg" alt="Слайд: Перфоратор Бош" class="promo-slide-img" width="620"
+            height="266" />
+          <!-- <img class="promo-slide-img" src="img/for-test/test.jpg" alt="Слайд: Перфоратор Бош" width="620" height="266" /> -->
         </div>
       </div>
       <div class="promo-item promo-item-sale">
@@ -145,7 +146,7 @@
 
     <section class="products">
       <header class="products-header">
-        <h2 class="header-text">Популярные товары</h2>
+        <h2 class="header-text">Популярные товары:</h2>
         <a class="button" href="catalog.html">Все популярные товары</a>
       </header>
       <ul class="products-list">
@@ -184,6 +185,17 @@
           <p class="product-oldprice">35550 P.</p>
           <p class="product-price">25550 P.</p>
         </li>
+
+        <!-- <li class="products-item">
+          <div class="product-item-container">
+            <img src="img/for-test/test.jpg" width="144" height="128" alt="Перфоратор BOSH bfg6000" />
+          </div>
+          <h3>Перфоратор BOSH BFG 6000</h3>
+          <p class="product-oldprice">35550 P.</p>
+          <p class="product-price">25550 P.</p>
+        </li> -->
+
+
         <!-- !!! первый вариант добавления уголка NEW !!! -->
         <!-- и -->
         <!-- !!!второй вариант добавления "красной цены" через свг в хтмл!!! -->
@@ -213,6 +225,11 @@
         <li class="firms-item">
           <a href="#"><img src="img/firms/bosch.png" alt="bosh" width="126" height="37" /></a>
         </li>
+
+        <li class="firms-item">
+          <a href="#"><img src="img/for-test/test.jpg" alt="bosh" width="126" height="37" /></a>
+        </li>
+
         <li class="firms-item">
           <a href="#"><img src="img/firms/makita.png" alt="makita" width="123" height="40" /></a>
         </li>
@@ -511,19 +528,22 @@
           <button class="button login-button" type="submit">ОТПРАВИТЬ</button>
         </div>
 
-        <button class="modal-close modal-close-login" type="button"></button>
+        <button class="modal-close modal-close-login" type="button" aria-label="закрыть"></button>
       </form>
     </div>
   </section>
 
   <section class="modal-wrapper">
     <div class="modal modal-map">
-      <h2 class="visually-hidden">Map</h2>
+      <h2 class="visually-hidden">Мы ТУТ</h2>
       <div class="modal-big-map">
-        <img src="https://via.placeholder.com/940x449"
-          alt="большая карта, адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616352156!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1613418564612!5m2!1sru!2sru"
+          frameborder="0" width="940" height="449" allowfullscreen
+          title="адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19">
+        </iframe>
       </div>
-      <button class="modal-close modal-close-map" type="button"></button>
+      <button class="modal-close modal-close-map" type="button" aria-label="закрыть"></button>
     </div>
   </section>
 
@@ -537,7 +557,7 @@
         <button class="button button-buy" id="buy" type="button">Оформить заказ</button>
         <button class="modal-button-continue button" type="button">Продолжить покупки</button>
       </div>
-      <button type="button" class="modal-close modal-close-add"></button>
+      <button type="button" class="modal-close modal-close-add" aria-label="закрыть"></button>
     </div>
   </section>
 
@@ -548,8 +568,8 @@
     </div>
   </template>
 
-<!-- <script src="js/index.js"></script> -->
-<script src="js/script.js"></script>
+  <!-- <script src="js/index.js"></script> -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>

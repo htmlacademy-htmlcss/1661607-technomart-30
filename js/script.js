@@ -16,7 +16,7 @@ const scrollWidth = getScrollWidth();
 const dots = document.querySelectorAll('.slider-dot-item');
 const arrowLeft = document.querySelector('.slider-arrow-left');
 const arrowRight = document.querySelector('.slider-arrow-right');
-const promoSlide = document.querySelector(".promo-slide-img img");
+const promoSlide = document.querySelector(".promo-slide-img");
 const sliderHeaderCurent = document.querySelector(".promo-slide-name");
 const sliderTextCurent = document.querySelector(".promo-slide-description");
 
