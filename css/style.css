@@ -899,6 +899,13 @@
 
 /* products */
 
+.bfg6000 {
+    margin: 0 11px 3px 0; /*pp*/
+}
+.bfg3000 {
+    margin: 0 12.3px 4.5px 0; /*pp*/
+}
+
 .products-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -995,6 +1002,18 @@
 
 /* firms */
 
+.makita-dewalt {
+    margin-bottom: 3px; /*pp*/
+}
+.interskol {
+    margin-bottom: 1px; /*pp*/
+    margin-right: 1px;
+}
+.hitachi {
+    margin-left: 5px; /*pp*/
+    margin-top: 2px;
+}
+
 .firms-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1011,7 +1030,6 @@
     width: 220px;
     height: 145px;
     box-sizing: border-box;
-    justify-content: center;
 }
 
 .firms-item a {
