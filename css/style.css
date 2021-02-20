@@ -670,9 +670,10 @@
      padding: 0 26px;
  }
 
-.main-header-navigation a:hover {
+.main-header-navigation a:hover,
+.main-header-navigation a:focus {
     background-color: var(--basic-extra-dark);
-}
+}                   
 
 .main-header-navigation a:active {
     background-color: var(--dark-2);
@@ -769,10 +770,10 @@
     cursor: pointer;
 }
 
-
 .slider-arrow-left:focus, 
 .slider-arrow-right:focus {
     outline: none;
+    opacity: .7;
 }
 
 .slider-arrow-left{
@@ -854,6 +855,7 @@
     box-sizing: border-box;
     width: 300px;
     height: 123px;
+    position: relative;
 }
 
 .promo-item-material {
@@ -973,7 +975,8 @@
 
     display: grid;
     grid-template-rows: min-content auto 31px 59px;
-    min-height: 315px; 
+    min-height: 315px;
+    position: relative; 
 }
 
 
@@ -1007,20 +1010,18 @@
     margin: 0 0 13px;
 }
 
-
-/* !!!первый вариант добавления "красной цены" - через картинку в css!!! */
 .product-price {
     color: var(--basic-white);
-    height: 38px;
-    width: 141px;
+    height: 100px;
+    width: 220px;
     background-image: url("../img/price-red.svg");
     background-repeat: no-repeat;
-    margin: 0 0 0 5px;
-    padding-top: 10px;
-    justify-self: center;
+    background-position: 57% 3%;
+    margin: 0;
+    padding-top: 11px;;
 }
 
-/* !!!второй вариант добавления "красной цены" через свг в хтмл!!! */
+
 .product-pricez {
     color: var(--basic-white);
     margin: 2px 0 0 10px;
@@ -1060,7 +1061,6 @@
 .firms-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: 1fr 1fr; */
     gap: 20px;
 
     padding: 20px 0 0 0;
@@ -1318,7 +1318,6 @@
 
 .footer-top-item {
     display: grid;
-    /* grid-template-columns: 10fr 19fr; еле подобрал */
     grid-template-columns: 1fr 546px;
 }
 
@@ -1327,12 +1326,10 @@
     flex-wrap: wrap;
     align-items: flex-end; 
     justify-content: space-between;
-    /* align-items: space-between; */
     margin: 0;
 }
 
 .footer-nav-item {
-    /* flex-grow: 1; */
     text-align: end;
 }
 
@@ -1507,9 +1504,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    /* !!!по идее надо бы задать, но и так работает... и даже лучше!!! */
-    /* grid-template-rows: 1fr 1fr 1fr; */
-
     column-gap: 20px;
     row-gap: 18px;
     margin: 0;
@@ -1528,7 +1522,6 @@
 .breadcrumbs-item {
     margin-right: 41px;
     position: relative;
-    /* margin-top: -1px; */
 }
 
 .breadcrumbs-item:last-child {
@@ -1536,7 +1529,6 @@
 }
 
 .breadcrumbs-item:not(:last-child)::after {
-/* .breadcrumbs-item:not(:last-child)::before { */
     position: absolute;
     content: "";
     width: 8px;
@@ -1703,9 +1695,6 @@
     height: 1px;
     border: none;
     background-color: var(--basic-gray);
-
-    /* !!!в фигме указан этот, но его не видно!!!
-    background-color: rgba(0, 0, 0, 0.0001); */
 }
 
 .forms fieldset {
@@ -1844,12 +1833,13 @@
     min-height: 38px;
     margin: 0;
     margin-bottom: 28px;
-    padding: 10px 14px 10px 19px;
+    padding: 10px 0 10px 0;
     box-sizing: border-box;
     background-color: var(--basic-pale);
 }
 
 .sorting-text {
+    padding-left: 20PX;
     grid-column: 1 / 4;
     margin: 0;
 }
@@ -1858,35 +1848,24 @@
     grid-column: 4 / 9;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */ /*pp*/
-    margin: 0 10px 0 0;
-    margin: 0 10px 0 -7px; /*pp*/
+    margin: 0;
+    padding-left: 1px;
 }
 
 .sort-by-list li{
     max-height: 18px;
-    margin-right: 65px; /*pp*/
+    margin-right: 66px;
 }
 
 .sort-by-list li:first-child{
-    margin-right: 70px; /*pp*/
+    margin-right: 70px;
 }
 .sort-by-list li:last-child{
     margin-right:0; /*pp*/
 }
 
-.order-by-list {
-    grid-column: 9 / 10;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0 0 12px;
-    /* padding-bottom: 2px; */
-    /* box-sizing: border-box; */
-}
-
 .sort-by-item {
     display: inline-block;
-    cursor: pointer;
     border: none;
     border-bottom: 1px dotted var(--basic-red);
     color: var(--basic-black);
@@ -1894,12 +1873,6 @@
     background-color: transparent;
 }
 
-.sort-by-item:focus {
-    opacity: 1;
-    border: none;
-    color: var(--basic-black);
-    border-bottom: 1px solid var(--basic-red);
-}
 
 .sort-by-active {
     opacity: 1;
@@ -1907,43 +1880,30 @@
     border-bottom: none;
 }
 
-.sort-by-item:hover {
+.sort-by-item:hover,
+.sort-by-item:focus {
     opacity: 1;
     color: var(--basic-black);
     border-bottom: 1px solid var(--basic-red);
 }
 
-.order-by-up,
-.order-by-down {
-    display: inline-block;
-    background-repeat:no-repeat;
-    width: 11px;
-    height: 10px;
+.order-by-list {
+    grid-column: 9 / 10;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 16px 0 0;
 }
 
-.order-by-up {
-    background-image: url("../img/triangle/red-up.svg")
+.triangle-active path{
+    fill: var(--basic-red);
 }
 
-.order-by-down {
-    background-image: url("../img/triangle/gray-down.svg")
+.triangle:hover path,
+.triangle:focus path {
+    fill: var(--basic-black);
 }
 
-.order-by-up:hover {
-    background-image: url("../img/triangle/black-up.svg")
-}
 
-.order-by-down:hover {
-    background-image: url("../img/triangle/black-down.svg")
-}
-
-.order-by-up:active {
-    background-image: url("../img/triangle/red-up.svg")
-}
-
-.order-by-down:active {
-    background-image: url("../img/triangle/red-down.svg")
-}
 
 
 /* pagination */
@@ -1981,7 +1941,6 @@
 
 .pages-item-current {
     background-color: var(--basic-red);
-    /* border: none; */
     color: var(--basic-white);
     border-color: var(--basic-red);
 
@@ -2021,54 +1980,22 @@
     margin: 0 0 25px;
 }
 
-/* 
-!!!следующего стиля быть не должно, но общий размер .perforator-article
-без него не сходится:  !!! */
 
 .perforator-article p:not(:last-child) {
     margin-bottom: 1px;
 }
 
-/* !!! первый вариант добавления уголка NEW !!! */
-
-.item-new {
-    position: relative;
-}
-
-.item-new::after {
-    position: absolute;
-    content: "";
-    width: 67px;
-    height: 67px;
-    top: 0;
-    right: 0;
-    background-image: url("../img/new.png");
-
-}
-
-/* !!! второй вариант добавления уголка NEW !!! */
-.item-new1 {
-    position: relative;
-}
-
-.new-product-coner {
-    position: absolute;
-    width: 67px;
-    height: 67px;
-    top: 0;
-    right: 0;
-    background-image: url("../img/new.png");
-}
 .new-conner {
     transform: rotate(45deg);
     position: absolute;
     top: 8px;
     right: -27px;
 }
+
 .new-text {
     transform: rotate(45deg);
     position: absolute;
-    top: 16px;
+    top: 15px;
     right: 13px;
     color:var(--basic-white);
     font-family: "Cuprum", "Arial", sans-serif;
@@ -2086,7 +2013,7 @@
     display: none;
     align-items:center;
     justify-content:center;
-    top:0;
+    top: 0;
     right: 0;
     width:100vw;
     height:100vh;
