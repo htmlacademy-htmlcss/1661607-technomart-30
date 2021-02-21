@@ -720,8 +720,7 @@
 }
 
 .container-catalog {
-    padding-top: 20px;  /*for pixel perfect*/
-    /* padding-top: 21px; */
+    padding-top: 21px;
     background-color: var(--basic-white);
 }
 
@@ -951,8 +950,8 @@
 
 .product-item-container {
     width: 220px;
-    height: 175px;
-    margin-bottom: 4px;
+    height: 173px;
+    margin-bottom: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1169,9 +1168,9 @@
     height: 61px;
     width: 240px;
     box-sizing: border-box;
-    padding: 14px 0 17px 22px;
+    padding: 14px 0 17.5px 22px;
     margin: 0;
-    font-family: "PT Sans", "Arial", sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-weight: 700;
     font-size: 21px;
     line-height: 30px;
@@ -1179,6 +1178,11 @@
     background: var(--basic-dark);
     box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--dark-1);
     cursor: pointer;
+    margin-bottom: 1px;
+}
+
+.services-item:last-child{
+    margin-bottom: 0;
 }
 
 .services-item-disactive:hover {
@@ -1218,17 +1222,17 @@
 
 .company-info {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
 }
 
 .company-description {
-    grid-column: 1 / 4;
-
+    grid-column: 1 / 7;
     padding: 70px 0;
 }
 
 .company-location {
-    grid-column: 5 / 7;
+    grid-column: 9 / 13;
 
     padding: 70px 0;
 }
@@ -1561,10 +1565,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 29px 14px 30px 29px; */
-    padding: 31px 14px 28px 29px; /*pp*/
+    padding: 29px 14px 30px 28px;
     box-sizing: border-box;
+}
 
+.firms-header {
+    padding-right: 19px;
 }
 
 .tools {
@@ -1849,7 +1855,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    padding-left: 1px;
+    padding-left: 1.5px;
 }
 
 .sort-by-list li{
@@ -1858,10 +1864,10 @@
 }
 
 .sort-by-list li:first-child{
-    margin-right: 70px;
+    margin-right: 71px;
 }
 .sort-by-list li:last-child{
-    margin-right:0; /*pp*/
+    margin-right:0;
 }
 
 .sort-by-item {
@@ -1891,7 +1897,7 @@
     grid-column: 9 / 10;
     display: flex;
     justify-content: space-between;
-    margin: 0 16px 0 0;
+    margin: 0 17px 0 1px;
 }
 
 .triangle-active path{
@@ -1902,9 +1908,6 @@
 .triangle:focus path {
     fill: var(--basic-black);
 }
-
-
-
 
 /* pagination */
 
@@ -1925,14 +1928,12 @@
 }
 
 .pages-item {
-    display: block;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 38px;
     width: 38px;
-    padding-top: 10px;
-    margin: 0;
-    margin-right: 10px;
-    margin-bottom: 5px;
+    margin: 0 10px 5px 0;
     border: 1px solid var(--gray-4);
     box-sizing: border-box;
     border-radius: 2px;
@@ -1973,13 +1974,12 @@
 .perforator-article {
     width: 940px;
     padding: 64px 0 68px;
-    padding: 65px 0 67.5px; /*pp*/
+    /* padding: 65px 0 67.5px; pp */
 }
 
 .perforator-article h2 {
     margin: 0 0 25px;
 }
-
 
 .perforator-article p:not(:last-child) {
     margin-bottom: 1px;
