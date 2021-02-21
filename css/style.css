@@ -969,6 +969,7 @@
     width: 220px;
     border: 1px solid var(--light-1);
     box-sizing: border-box;
+    overflow: hidden;
 
     display: grid;
     grid-template-rows: min-content auto 31px 59px;

@@ -191,26 +191,38 @@ function addTooBookmark(elem) {
 }
 
 // обработчики для карточек продуктов
-cards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        const container = card.querySelector('.product-item-container');
-        const img = container.querySelector('img');
-        img.style.display = 'none';
-        container.append(templ.content.cloneNode(true));
-        addTooCart(card);
-        addTooBookmark(card);
-    })
-})
+function showButtons(elem) {
+  if (!elem.querySelector('.buy-prod')) {
+    const container = elem.querySelector('.product-item-container');
+    const img = container.querySelector('img');
+    img.style.display = 'none';
+    container.append(templ.content.cloneNode(true));
+    addTooCart(elem);
+    addTooBookmark(elem);
+  }
+}
+
+function hiddenButtons(elem) {
+  if (elem.querySelector('.buy-prod')) {
+    const container = elem.querySelector('.product-item-container');
+    const img = container.querySelector('img');
+    const revoveBlock = container.querySelector('.image-to-buy');
+    revoveBlock.remove();
+    img.style.display = 'block';
+  }
+
+}
 
 cards.forEach(card => {
-    card.addEventListener('mouseleave', () => {
-        const container = card.querySelector('.product-item-container');
-        const img = container.querySelector('img');
-        const revoveBlock = container.querySelector('.image-to-buy');
-        revoveBlock.remove()
-        img.style.display = 'block';
-    })
+    card.addEventListener('mouseenter', () => showButtons(card));
+    card.addEventListener('mouseleave', () => hiddenButtons(card));
+    card.addEventListener('focus', () => showButtons(card));
+    card.addEventListener('blur', () => hiddenButtons(card));
 })
+
+// cards.forEach(card => {
+//     card.addEventListener('mouseleave', () => hiddenButtons(card))
+// })
 
 // вешаем события на кнопку купить и на остальные 3 кнопки - закрыть.
 function addTooCart(elem) {
