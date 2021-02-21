@@ -40,7 +40,7 @@
 
           <a class="button-cart" href="#">
             &nbsp;Корзина:&nbsp;
-            <span class="button-cart-num">10</span>
+            <span class="button-cart-num">0</span>
           </a>
 
           <a class="button-arrange" href="#">Оформить заказ</a>
@@ -60,7 +60,7 @@
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </p>
       <div class="user-name">
-        <a class="user-name-name" href="#">Равшан Джамшутович
+        <a class="user-name-name" href="#" aria-label="страница пользователя">Равшан Джамшутович
 
           <svg width="20" height="19" viewBox="0 0 20 19" fill="none" class="user-name-img"
             xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +69,7 @@
               fill="#C5C5C5" />
           </svg>
         </a>
-        <a href="#" class="logout">
+        <a href="#" class="logout"  aria-label="разлогиниться">
           <svg width="20" height="17" viewBox="0 0 20 17" fill="none" class="logout-img"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5" />
@@ -104,7 +104,7 @@
     <section class="breadcrumbs">
       <h2 class="visually-hidden">Расположение контента</h2>
       <ul class="breadcrumbs-list subtitle-text">
-        <li class="breadcrumbs-item"><a class="home-link" href="index.html"></a></li>
+        <li class="breadcrumbs-item"><a class="home-link" href="index.html" aria-label="на главную страницу"></a></li>
         <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
         <li class="breadcrumbs-item"><a href="#">Инструмент</a></li>
         <li class="breadcrumbs-item"><a>&nbsp;Перфораторы</a></li>
@@ -129,14 +129,15 @@
                 <div class="scale">
                   <div class="bar" style="width: 85%; margin-left: 0"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0"></div>
-                <div class="toggle toggle-max" tabindex="0"></div>
+                <div class="toggle toggle-min" tabindex="0" aria-label="ползунок минимальной цены"></div>
+                <div class="toggle toggle-max" aria-label="ползунок максимальной цены" tabindex="0"></div>
 
               </div>
               <div class="price-controls">
-                <input type="text" name="min-price" value="0">
+                <input type="text" name="min-price" value="0" aria-label="поле ввода минимальной цены">
                 <div class="range-ndash">&ndash;</div>
-                <input type="text" name="max-price" value="30000">
+                <input type="text" name="max-price" value="30000"
+                aria-label="поле ввода максимальной цены">
               </div>
           </fieldset>
 
@@ -186,7 +187,7 @@
             </ul>
           </fieldset>
 
-          <button class="filter-button" type="submit">Показать</button>
+          <button class="filter-button" type="submit" aria-label="применить настроенный фильтр для отображения товаров">Показать</button>
         </form>
       </section>
 
@@ -206,7 +207,7 @@
           </ul>
           <ul class="order-by-list">
             <li>
-              <a href="#">
+              <a href="#" aria-label="сортровка по возрастанию">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" class="triangle triangle-up triangle-active">
                 <path d="M5.5,0 11,10 0,10" fill="#C5C5C5" />
               </svg>
@@ -214,7 +215,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" aria-label="сортровка по убывнию">
                 <svg class="triangle triangle-down" width="10" height="10" viewBox="0 0 10 10">
                   <path d="M0,0 11,0 5.5,10" fill="#C5C5C5" />
                 </svg>
@@ -225,7 +226,7 @@
         <div class="products products-catalog">
           <ul class="products-list-catalog">
 
-            <li class="products-item">
+            <li class="products-item" tabindex="0">
               <div class="product-item-container">
                 <img src="img/products/bfg6000.png" class="bfg6000" width="144" height="128" alt="Перфоратор BOSCH bfg6000" />
               </div>
@@ -234,7 +235,7 @@
               <p class="product-price">25500 P.</p>
             </li>
 
-            <li class="products-item">
+            <li class="products-item" tabindex="0">
               <div class="product-item-container">
                 <img src="img/products/bfg6000.png" class="bfg6000" width="144" height="128" alt="Перфоратор BOSCH bfg6000" />
               </div>
@@ -243,7 +244,7 @@
               <p class="product-price">25500 P.</p>
             </li>
             
-            <li class="products-item">
+            <li class="products-item" tabindex="0">
               <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
                 <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
               </svg>
@@ -256,7 +257,7 @@
               <p class="product-price">25500 P.</p>
             </li>
 
-            <li class="products-item">
+            <li class="products-item" tabindex="0">
               <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
                 <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
               </svg>
@@ -269,7 +270,7 @@
               <p class="product-price">15550 P.</p>
             </li>
 
-            <li class="products-item">
+            <li class="products-item" tabindex="0">
               <div class="product-item-container">
                 <img src="img/products/bfg6000.png" class="bfg6000" width="144" height="128" alt="Перфоратор BOSCH bfg6000" />
               </div>
@@ -278,7 +279,7 @@
               <p class="product-price">25500 P.</p>
             </li>
 
-            <li class="products-item">
+            <li class="products-item" tabindex="0">
               <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
                 <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
               </svg>
@@ -291,7 +292,7 @@
               <p class="product-price">12550 P.</p>
             </li>
 
-            <li class="products-item">
+            <li class="products-item" tabindex="0">
               <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
                 <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
               </svg>
@@ -304,7 +305,7 @@
               <p class="product-price">15550 P.</p>
             </li>
 
-            <li class="products-item">
+            <li class="products-item" tabindex="0">
               <div class="product-item-container">
                 <img src="img/products/bfg6000.png" class="bfg6000" width="144" height="128" alt="Перфоратор BOSCH bfg6000" />
               </div>
@@ -313,7 +314,7 @@
               <p class="product-price">25500 P.</p>
             </li>
 
-            <li class="products-item">
+            <li class="products-item" tabindex="0">
               <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
                 <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
               </svg>
@@ -459,13 +460,12 @@
 
   <template id="buy-and-bookmark">
     <div class="image-to-buy">
-      <button type="button" class="buy-prod">купить</button>
-      <button type="button" class="bookmark-prod">в закладки</button>
+      <button type="button" class="buy-prod" aria-label="Добавить товар в корзину">купить</button>
+      <button type="button" class="bookmark-prod" aria-label="Добавить товар в закладки">в закладки</button>
     </div>
   </template>
 
   <script src="js/script.js"></script>
-
 </body>
 
 </html>

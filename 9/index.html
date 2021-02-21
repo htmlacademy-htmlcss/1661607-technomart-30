@@ -89,7 +89,7 @@
       <h2 class="visually-hidden">Промо-блок</h2>
       <div class="promo-item promo-item-material item-new">
         <h3>Материалы</h3>
-        <a class="promo-button" href="#">
+        <a class="promo-button" href="#"  aria-label="Материалы">
           На любой вкус
         </a>
         <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
@@ -100,13 +100,13 @@
       </div>
       <div class="promo-item promo-item-tool">
         <h3>Инструмент</h3>
-        <a class="promo-button" href="#">
+        <a class="promo-button" href="#" aria-label="Инструмент">
           На все случаи
         </a>
       </div>
       <div class="promo-item promo-item-tech">
         <h3>Техника</h3>
-        <a class="promo-button" href="#">
+        <a class="promo-button" href="#" aria-label="Техника">
           Для стройки
         </a>
       </div>
@@ -129,13 +129,13 @@
       </div>
       <div class="promo-item promo-item-sale">
         <h3>Скидки 50%</h3>
-        <a class="promo-button" href="#">
+        <a class="promo-button" href="#" aria-label="товары со скидкой">
           На 350 товаров
         </a>
       </div>
       <div class="promo-item promo-item-delivery">
         <h3>Доставка</h3>
-        <a class="promo-button" href="#">
+        <a class="promo-button" href="#" aria-label="условия бессплатной доставки">
           Бесплатно
         </a>
       </div>
@@ -147,9 +147,7 @@
         <a class="button" href="catalog.html">Все популярные товары</a>
       </header>
       <ul class="products-list">
-
-        <!-- !!!первый вариант добавления "красной цены" - через картинку в css!!! -->
-        <li class="products-item">
+        <li class="products-item" tabindex="0">
           <div class="product-item-container">
             <img src="img/products/bfg9000.png" width="184" height="164" alt="Перфоратор BOSH bfg9000" />
           </div>
@@ -157,7 +155,7 @@
           <p class="product-oldprice">32500 P.</p>
           <p class="product-price">25500 P.</p>
         </li>
-        <li class="products-item">
+        <li class="products-item" tabindex="0">
           <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
             <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
           </svg>
@@ -171,7 +169,7 @@
           <p class="product-oldprice">22500 P.</p>
           <p class="product-price">15500 P.</p>
         </li>
-        <li class="products-item">
+        <li class="products-item" tabindex="0">
           <div class="product-item-container">
             <img src="img/products/bfg6000.png" class="bfg6000" width="144" height="128"
               alt="Перфоратор BOSH bfg6000" />
@@ -180,7 +178,7 @@
           <p class="product-oldprice">30500 P.</p>
           <p class="product-price">25500 P.</p>
         </li>
-        <li class="products-item">
+        <li class="products-item" tabindex="0">
           <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
             <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
           </svg>
@@ -250,9 +248,9 @@
         </div>
 
         <ul class="services-tabs-list">
-          <li class="services-item services-item-active">Доставка</li>
-          <li class="services-item services-item-disactive">Гарантия</li>
-          <li class="services-item services-item-disactive">Кредит</li>
+          <li><button class="services-item services-item-active"  aria-label="слайд: Доставка">Доставка</button></li>
+          <li><button class="services-item services-item-disactive"  aria-label="слайд: Гарантия">Гарантия</button></li>
+          <li><button class="services-item services-item-disactive" aria-label="слайд: Кредит">Кредит</button></li>
         </ul>
 
         <div class="service-description">
@@ -263,7 +261,7 @@
             Ведь мы неплохо заработаем, <br />
             поднимая его на ваш этаж!
           </p>
-          <a href="#" class="button button-credit">отправить заявку</a>
+          <a href="#" class="button button-credit" aria-label="страница заполнения заявки">отправить заявку</a>
         </div>
 
         <div class="service-img service-img-truck"></div>
@@ -444,8 +442,8 @@
 
   <template id="buy-and-bookmark">
     <div class="image-to-buy">
-      <button type="button" class="buy-prod">купить</button>
-      <button type="button" class="bookmark-prod">в закладки</button>
+      <button type="button" class="buy-prod" aria-label="Добавить товар в корзину">купить</button>
+      <button type="button" class="bookmark-prod" aria-label="Добавить товар в закладки">в закладки</button>
     </div>
   </template>
   <script src="js/script.js"></script>
