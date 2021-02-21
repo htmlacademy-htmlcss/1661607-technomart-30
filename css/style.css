@@ -399,8 +399,12 @@
     background-color: var(--basic-green);
 }
 
-.button-arrange:active {
+.button-arrange:hover {
     background-color: var(--basic-green-success);
+}
+
+.button-arrange:active {
+    background-color: var(--basic-green);
     color: var(--white-half)
 }
 
@@ -767,12 +771,6 @@
     border: none;
     padding: 0;
     cursor: pointer;
-}
-
-.slider-arrow-left:focus, 
-.slider-arrow-right:focus {
-    outline: none;
-    opacity: .7;
 }
 
 .slider-arrow-left{
@@ -1169,7 +1167,6 @@
     width: 240px;
     box-sizing: border-box;
     padding: 14px 0 17.5px 22px;
-    margin: 0;
     font-family: "Cuprum", "Arial", sans-serif;
     font-weight: 700;
     font-size: 21px;
@@ -1178,6 +1175,10 @@
     background: var(--basic-dark);
     box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--dark-1);
     cursor: pointer;
+    border: none;
+    text-align: start;
+}
+.services-tabs-list li:not(:last-child) {
     margin-bottom: 1px;
 }
 
@@ -1193,6 +1194,7 @@
     color: var(--basic-dark);
     background: var(--basic-white);
     box-shadow: 0px 1px 0px var(--basic-white);
+    outline: none;
 }
 
 .service-img {
@@ -1233,7 +1235,6 @@
 
 .company-location {
     grid-column: 9 / 13;
-
     padding: 70px 0;
 }
 
@@ -1756,11 +1757,17 @@
     background-image: url("../img/check-and-radio/checkbox-off.svg");
     width: 23px;
     height: 23px;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 .filter-checkbox:hover + label::before {
     opacity: 1;
+    /* outline: 4px solid #666; */
+}
+
+.filter-checkbox:focus + label::before,
+.filter-radio:focus + label::before {
+    outline: 1px solid var(--basic-dark);
 }
 
 .filter-checkbox:disabled + label::before {
@@ -1798,7 +1805,7 @@
     border: 4px solid var(--basic-gray);
     border-radius: 50%;
     box-sizing: border-box;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 .filter-radio:checked + label::after {
