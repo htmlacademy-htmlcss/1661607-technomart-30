@@ -122,11 +122,91 @@ services.forEach((serv, i) => {
 
 // modals
 
+function openModal(modalForOpen, btnForOpen) {
+  btnForOpen.addEventListener('click', evt => {
+    evt.preventDefault();
+    modalForOpen.parentNode.style.display = 'flex';
+    modalForOpen.classList.add('open-animation');
+    setTimeout(() => modalForOpen.classList.remove('open-animation'), 500);
+    document.body.style.overflow = 'hidden';
+    document.body.style.marginRight = `${scrollWidth}px`;
+
+    const name = modalForOpen.querySelector('[name=name]');
+    if (name) {
+      letterSender(modalForOpen, name);
+    }
+
+    if (btnForOpen.classList.contains('buy-prod')) {
+      counterBuy++;
+      buyNum.textContent = counterBuy;
+      buttonCart.classList.add('header-something-inside')
+    }
+  })
+}
+
 function closeModal(modalForClose, btnForClose) {
-  btnForClose.addEventListener('click', () => {
+  function closer() {
     modalForClose.parentNode.style.display = 'none';
     document.body.style.overflow = '';
     document.body.style.marginRight = 0;
+  }
+
+  btnForClose.addEventListener('click', () => {
+    closer()
+  })
+
+  window.addEventListener('keydown', (evt) => {
+    if (evt.keyCode == 27) {
+      evt.preventDefault();
+      closer();
+    } 
+  })
+}
+
+// modals animation and forms
+
+function letterSender(mL, name) {
+  const mail = mL.querySelector('.login-email');
+  const letter = mL.querySelector('.login-letter');
+  const form = mL.querySelector('form');
+  const loginButton = mL.querySelector('.login-button');
+
+  if (localStorage.getItem('name')) {
+    name.value = localStorage.getItem('name');
+  }
+
+  if (localStorage.getItem('mail')) {
+    mail.value = localStorage.getItem('mail');
+  }
+
+  if (!name.value) {
+    name.focus();
+  } else if (!mail.value) {
+    mail.focus();
+  } else {
+    letter.focus();
+  }
+
+  form.addEventListener('submit', (evt) => {
+    if (name.value) {
+      localStorage.setItem('name', name.value);
+    }
+ 
+    if (mail.value) {
+      localStorage.setItem('mail', mail.value);
+    }
+
+    if (!name.value || !mail.value || !letter.value) {
+      evt.preventDefault()
+      loginButton.style.backgroundColor = 'white';
+      loginButton.innerHTML = '<p class="header-text">заполните все поля</p>';
+      mL.classList.add('error-animation');
+      setTimeout(() => mL.classList.remove('error-animation'), 100);
+      setTimeout(() => {
+        loginButton.style.backgroundColor = '#EE3643';
+        loginButton.textContent = 'ОТПРАВИТЬ';
+      }, 1500)
+    } 
   })
 }
 
@@ -142,7 +222,6 @@ if (writeUs) {
     closeModal(modalLogin, closeModalLogin);
 }
 
-
 // map modal
 
 const modalMap = document.querySelector('.modal-map');
@@ -153,21 +232,6 @@ if (modalMap) {
     openModal(modalMap, mapButton);
     closeModal(modalMap, closeModalMap);
 }
-
-function openModal(modalForOpen, btnForOpen) {
-    btnForOpen.addEventListener('click', evt => {
-      evt.preventDefault();
-      modalForOpen.parentNode.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      document.body.style.marginRight = `${scrollWidth}px`;
-        // если жмем "купить":
-      if (btnForOpen.classList.contains('buy-prod')) {
-        counterBuy++;
-        buyNum.textContent = counterBuy;
-        buttonCart.classList.add('header-something-inside')
-      }
-    })
-  }
   
 const modalAdded = document.querySelector('.modal-added');
 const closeModalAdded = modalAdded.querySelector('.modal-close');
@@ -210,7 +274,6 @@ function hiddenButtons(elem) {
     revoveBlock.remove();
     img.style.display = 'block';
   }
-
 }
 
 cards.forEach(card => {
@@ -220,10 +283,6 @@ cards.forEach(card => {
     card.addEventListener('blur', () => hiddenButtons(card));
 })
 
-// cards.forEach(card => {
-//     card.addEventListener('mouseleave', () => hiddenButtons(card))
-// })
-
 // вешаем события на кнопку купить и на остальные 3 кнопки - закрыть.
 function addTooCart(elem) {
     const addedButton = elem.querySelector('.buy-prod');
@@ -232,7 +291,6 @@ function addTooCart(elem) {
     closeModal(modalAdded, closeModalAdded2);
     closeModal(modalAdded, closeModalAdded3);
 }  
-
 
 // убрать дерганье модального окна от скрола
 function getScrollWidth() {
@@ -246,3 +304,4 @@ function getScrollWidth() {
     div.remove();
     return scrollWidth;
   }
+

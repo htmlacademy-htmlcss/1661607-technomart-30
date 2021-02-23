@@ -115,8 +115,8 @@
           <p class="promo-slide-description for-item-text">Настоящие мужские игрушки</p>
         </div>
         <div class="promo-slide">
-          <button class="slider-arrow-left" aria-label="промо-слайдер: предыдущий слайд"></button>
-          <button class="slider-arrow-right" aria-label="промо-слайдер: слудующий слайд"></button>
+          <button class="slider-arrow slider-arrow-left" aria-label="промо-слайдер: предыдущий слайд"></button>
+          <button class="slider-arrow slider-arrow-right" aria-label="промо-слайдер: слудующий слайд"></button>
           <ul class="slider-dot-list">
             <li class="slider-dot-item slider-dot-active"></li>
             <li class="slider-dot-item"></li>
@@ -386,20 +386,20 @@
   <section class="modal-wrapper">
     <div class="modal modal-login for-item-text">
       <h2 class="visually-hidden">Отправка письма</h2>
-      <form method="POST" action="#">
+      <form method="POST" action="https://echo.htmlacademy.ru">
         <div class="modal-inputs-container">
           <div>
             <label for="name">Ваше имя:</label> <br />
-            <input class="login-name" type="text" name="name" id="name" placeholder="Имя Фамилия" required />
+            <input class="login-name" type="text" name="name" id="name" placeholder="Имя Фамилия"  />
           </div>
           <div>
             <label for="email">Ваш e-mail:</label> <br />
-            <input class="login-email" type="email" name="email" id="email" placeholder="e-mail@example.com" required />
+            <input class="login-email" type="email" name="email" id="email" placeholder="e-mail@example.com"  />
           </div>
           <div>
             <label for="letter">Текст письма:</label> <br />
             <textarea class="login-letter" rows="5" name="letter" id="letter" placeholder="В свободной форме"
-              required></textarea>
+              ></textarea>
           </div>
         </div>
         <div class="modal-buttons">
