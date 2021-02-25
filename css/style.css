@@ -1180,7 +1180,7 @@
     min-height: 61px;
     width: 240px;
     box-sizing: border-box;
-    padding: 14px 0 17.5px 22px;
+    padding: 13.5px 0 17.5px 22px;
     font-family: "Cuprum", "Arial", sans-serif;
     font-weight: 700;
     font-size: 21px;
@@ -2275,6 +2275,9 @@
     outline: none;
 }
 
+.small-space {
+    letter-spacing: -2px;
+}
 
 /* Animations */
 
@@ -2327,5 +2330,3 @@
 .error-animation {
     animation: shake .3s;
 }
-
-

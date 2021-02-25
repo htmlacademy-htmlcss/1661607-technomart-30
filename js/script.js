@@ -255,6 +255,8 @@ function addTooBookmark(elem) {
 }
 
 // обработчики для карточек продуктов
+
+let needElem; 
 function showButtons(elem) {
   if (!elem.querySelector('.buy-prod')) {
     const container = elem.querySelector('.product-item-container');
@@ -266,7 +268,27 @@ function showButtons(elem) {
   }
 }
 
-function hiddenButtons(elem) {
+// function hiddenButtonsFocus(elem) {
+//   const bookmarkProd = elem.querySelector('.bookmark-prod');
+//   if (bookmarkProd) {
+//     bookmarkProd.addEventListener('blur', () => {
+//       const revoveBlock = bookmarkProd.parentNode;
+      
+//       const container = revoveBlock.parentNode.parentNode.querySelector('.product-item-container');
+//       const img = container.querySelector('img');
+//       revoveBlock.remove();
+//       img.style.display = 'block';
+//     }) 
+//   }
+// }
+
+function hiddenButtonsFocus(elem) {
+  console.log(needElem);
+  // console.log(document.activeElement);
+
+}
+
+function hiddenButtonsMouse(elem) {
   if (elem.querySelector('.buy-prod')) {
     const container = elem.querySelector('.product-item-container');
     const img = container.querySelector('img');
@@ -278,9 +300,9 @@ function hiddenButtons(elem) {
 
 cards.forEach(card => {
     card.addEventListener('mouseenter', () => showButtons(card));
-    card.addEventListener('mouseleave', () => hiddenButtons(card));
+    card.addEventListener('mouseleave', () => hiddenButtonsMouse(card));
     card.addEventListener('focus', () => showButtons(card));
-    card.addEventListener('blur', () => hiddenButtons(card));
+    card.addEventListener('blur', () => hiddenButtonsFocus(card));
 })
 
 // вешаем события на кнопку купить и на остальные 3 кнопки - закрыть.
@@ -305,3 +327,7 @@ function getScrollWidth() {
     return scrollWidth;
   }
 
+ 
+window.addEventListener('keydown', (evt) => {
+  if (evt.keyCode == 9) needElem = document.activeElement;
+})
