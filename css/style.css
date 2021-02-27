@@ -233,7 +233,7 @@
     outline: var(--basic-dark) solid 2px;
 }
 
-.button-credit {
+.services-credit-button {
     background-color: var(--red-light);
     margin-top: 26px;
     display: none;
@@ -248,11 +248,12 @@
 }
 
 .button:hover {
-    background-color: var(--red-dark)
+    background-color: var(--red-dark);
 }
 
 .button:active {
-    background-color: var(--red-error)
+    background-color: var(--red-error);
+    outline: none;
 }
 
 /* body */
@@ -336,7 +337,7 @@
 }
 
 
-.search {
+.header-search-field {
     position: relative;
     padding-left: 42px;
     width: 100%;
@@ -345,7 +346,7 @@
     border: none;
 }
 
-.button-search {
+.header-search-button {
     position: absolute;
     top: 12px;
     left: 17px;
@@ -356,7 +357,7 @@
     cursor: pointer;
 
 }
-.button-search::before {
+.header-search-button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -367,23 +368,23 @@
     opacity: .3;
 }
 
-.search::placeholder {
+.header-search-field::placeholder {
     color: var(--basic-white);
     opacity: 1;
 }
 
-.search:focus {
+.header-search-field:focus {
     background-color: var(--basic-white);
     color: var(--basic-black);
     outline: 0;
     outline-offset: 0;
 }
 
-.search:hover + .button-search::before {
+.header-search-field:hover + .header-search-button::before {
     opacity: 1;
 }
 
-.search:focus + .button-search::before {
+.header-search-field:focus + .header-search-button::before {
     background-image: url("../img/small-icons/icon-search-red.svg");
     opacity: 1;
 }
@@ -399,6 +400,7 @@
 .button-bookmark:active {
     color: var(--white-half);
     background-color: var(--dark-3);
+    box-shadow: none;
 }
 
 .button-arrange {
@@ -540,7 +542,7 @@
 }
 
 
-.user-name, .login-reg {
+.user-name, .header-login-reg {
     grid-row: 1 / 2;
     grid-column: 3 / 4;
     align-self: end;
@@ -566,7 +568,7 @@
     padding: 0 0 0 57px;
 }
 
-.login-reg {
+.header-login-reg {
     width: 281px;
     box-sizing: border-box;
     display: flex;
@@ -598,7 +600,7 @@
     fill: var(--basic-gray);
 }
 
-.login-link {
+.header-login-link {
     padding: 12px 27px 12px 46px;
     background-color: var(--basic-white);
     position: relative;
@@ -610,11 +612,11 @@
     left: 19px;
 }
 
-.login-link:hover path {
+.header-login-link:hover path {
     fill: var(--svg-icon-hover);
 }
 
-.login-link:active path {
+.header-login-link:active path {
     fill: var(--basic-gray);
 }
 
@@ -644,7 +646,7 @@
     background-color: var(--basic-red);
 }
 
-.login-reg a {
+.header-login-reg a {
     font-size: 21px;
     line-height: 21px;
     color: var(--basic-black);
@@ -655,7 +657,7 @@
     color: var(--basic-dark);
 }
 
-.login-link:hover,
+.header-login-link:hover,
 .registration-link:hover,
 .user-orders:hover,
 .user-cabinet:hover,
@@ -664,7 +666,7 @@
     color: var(--basic-red);
 }
 
-.login-link:active,
+.header-login-link:active,
 .registration-link:active,
 .user-name-name:active, 
 .user-orders:active,
@@ -926,13 +928,7 @@
     justify-content: center;
 }
 
-.promo-button:hover {
-    background-color: var(--basic-gray);
-}
 
-.promo-button:active {
-    background-color: var(--gray-1);
-}
 
 
 /* products */
@@ -1494,10 +1490,6 @@
     text-decoration: underline;
 }
 
-.web-contacts-item a:active {
-    text-decoration: none;
-    color: var(--basic-red);
-}
   
 
 /* CATALOG */
@@ -1929,7 +1921,7 @@
 
 /* pagination */
 
-.pagination {
+.pages {
     display: grid;
     grid-template-columns: 1fr 3fr;
     column-gap: 20px
@@ -2209,6 +2201,9 @@
     border-radius: 2px;
 }
 
+
+/* HOVER - ACTIVE - FOCUS:  box-shadow / outline*/
+
 .buy-prod:hover {
     background-color: var(--basic-green-success);
 }
@@ -2216,6 +2211,7 @@
 .buy-prod:active {
     border: none;
     background-color: var(--green-dark2);
+    outline: none;
 }
 
 .bookmark-prod {
@@ -2224,17 +2220,17 @@
 }
 
 .bookmark-prod:hover {
-    
     border-color: var(--basic-dark);
 }
 
 .bookmark-prod:active {
     border-color: var(--basic-dark-opacity);
     color: var(--basic-dark-opacity);
+    outline: none;
 }
 
 .button-arrange:focus, 
-.button-search:focus, 
+.header-search-button:focus, 
 .footer-nav-item a:focus,
 .web-contacts-item a:focus,
 .footer-phone:focus {
@@ -2244,6 +2240,8 @@
 .services-item:focus {
     box-shadow: inset 0 0 1px 3px var(--basic-gray);
 }
+
+
 
 .main-header-logo:focus,
 .footer-logo:focus {
@@ -2257,7 +2255,7 @@
 }
 
 .registration-link:focus,
-.login-link:focus,
+.header-login-link:focus,
 .user-name-name:focus,
 .logout:focus,
 .slider-arrow:focus,
@@ -2268,6 +2266,16 @@
 .breadcrumbs-item a:hover {
     outline: var(--basic-dark) solid 2px;
 } 
+
+
+.promo-button:hover {
+    background-color: var(--basic-gray);
+}
+
+.promo-button:active {
+    background-color: var(--gray-1);
+    outline: none;
+}
 
 .pages-item:focus,
 .toggle:focus {
@@ -2280,8 +2288,26 @@
     outline: none;
 }
 
+.slider-arrow:active {
+    filter: drop-shadow(0 0 5px var(--basic-white));
+    outline: none;
+}
+
+.web-contacts-item a:active {
+    text-decoration: none;
+    color: var(--basic-red);
+    outline: none;
+}
+
+.pages-item:active,
+.social-button:active,
+.footer-nav-item a:active,
+.services-item:active,
+.products-item:active,
+.firms-item a:active,
 .breadcrumbs-item:last-child a:hover {
     outline: none;
+    box-shadow: none;
 }
 
 .small-space {

@@ -11,7 +11,8 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pref-min-style.css">
+  <!-- <link rel="stylesheet" href="css/prefics-style.css"> -->
 
 </head>
 
@@ -28,8 +29,8 @@
             <img src="img/logo-technomart.svg" alt="Техномарт" width="108" height="18">
           </a>
           <form method="get" action="https://echo.htmlacademy.ru" class="header-search">
-            <input class="search" type="search" name="search" placeholder="Поиск:" />
-            <button class="button-search" type="submit"></button>
+            <input class="header-search-field" type="search" name="search" placeholder="Поиск:" />
+            <button class="header-search-button" type="submit"></button>
           </form>
 
           <a class="button-bookmark" href="#">
@@ -338,15 +339,13 @@
       </section>
     </div>
 
-    <section class="pagination subtitle-text">
+    <section class="pages subtitle-text">
       <h2 class="visually-hidden">Страницы</h2>
       <ul class="pages-list">
         <li><a class="pages-item pages-item-current">1</a></li>
         <li><a class="pages-item" href="#">2</a></li>
         <li><a class="pages-item" href="#">3</a></li>
         <li><a class="pages-item pages-item-next" href="#">Следующая</a></li>
-
-
       </ul>
     </section>
 
@@ -465,8 +464,8 @@
       <button type="button" class="bookmark-prod" aria-label="Добавить товар в закладки" tabindex="-1">в закладки</button>
     </div>
   </template>
-
-  <script src="js/script.js"></script>
+  <script src="js/min-script.js"></script>
+  <!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>

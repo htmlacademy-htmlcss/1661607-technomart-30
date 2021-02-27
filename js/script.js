@@ -22,11 +22,11 @@ const sliderTextCurent = document.querySelector(".promo-slide-description");
 
 const sliderImgSrc = [
   "img/slides/slide-perforator.jpg",
-   "img/slides/slide-drill.jpg",
+  "img/slides/slide-drill.jpg",
   ];
 const sliderHeaders = [
   "ПЕРФОРАТОРЫ",
-   "ДРЕЛИ"
+  "ДРЕЛИ"
   ];
 const sliderTexts = [
   "Настоящие мужские игрушки", 
@@ -76,7 +76,7 @@ if (arrowRight && arrowLeft && dots) {
 }
 
 
-// services-slider
+// SERVICES-SLIDER
 
 const srviceTexts = [
   'Мы с удовольствием доставим ваш товар прямо <br />к вашему подъезду совершенно бесплатно!<br />Ведь мы неплохо заработаем, <br />поднимая его на ваш этаж!',
@@ -93,7 +93,7 @@ const services = document.querySelectorAll('.services-item');
 const headerService = document.querySelector('.service-description h3');
 const textService = document.querySelector('.service-description p');
 const serviceImg = document.querySelector('.service-img');
-const buttonCredit = document.querySelector('.button-credit');
+const buttonCredit = document.querySelector('.services-credit-button');
 
 const allDisactivate = () => {
   services.forEach(service => {
@@ -120,7 +120,7 @@ services.forEach((serv, i) => {
 })
 
 
-// modals
+// MODALS
 
 function openModal(modalForOpen, btnForOpen) {
   btnForOpen.addEventListener('click', evt => {
@@ -209,6 +209,19 @@ function letterSender(mL, name) {
   })
 }
 
+// убрать дерганье модального окна от скрола
+function getScrollWidth() {
+  const div = document.createElement('div');
+  div.style.overflowY = 'scroll';
+  div.style.width = '50px';
+  div.style.height = '50px';
+  div.style.visibility = 'hidden';
+  document.body.appendChild(div);
+  const scrollWidth = div.offsetWidth - div.clientWidth;
+  div.remove();
+  return scrollWidth;
+}
+
 // login modal
 const writeUs = document.getElementById('write-us');
 
@@ -249,7 +262,8 @@ function addTooBookmark(elem) {
     })
 }
 
-// обработчики для карточек продуктов
+
+// PRODUCT-CARDS
 
 function showButtons(elem) {
   if (!elem.querySelector('.buy-prod')) {
@@ -289,21 +303,8 @@ function addTooCart(elem) {
 }  
 
 
-// убрать дерганье модального окна от скрола
-function getScrollWidth() {
-    const div = document.createElement('div');
-    div.style.overflowY = 'scroll';
-    div.style.width = '50px';
-    div.style.height = '50px';
-    div.style.visibility = 'hidden';
-    document.body.appendChild(div);
-    const scrollWidth = div.offsetWidth - div.clientWidth;
-    div.remove();
-    return scrollWidth;
-  }
+// CATALOG-FILTER
 
-
-// catalog-range-numbers
 const rangeBlock = document.querySelector('.range');
 const MAX_PRICE = 35000;
 const BAR_WIDTH = 180;
