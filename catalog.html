@@ -128,16 +128,18 @@
                 <div class="scale">
                   <div class="bar" style="width: 85%; margin-left: 0"></div>
                 </div>
+
                 <div class="toggle toggle-min" tabindex="0" aria-label="ползунок минимальной цены"></div>
                 <div class="toggle toggle-max" aria-label="ползунок максимальной цены" tabindex="0"></div>
-
               </div>
+
               <div class="price-controls">
                 <input type="text" name="min-price" value="0" aria-label="поле ввода минимальной цены">
                 <div class="range-ndash">&ndash;</div>
                 <input type="text" name="max-price" value="30000"
                 aria-label="поле ввода максимальной цены">
               </div>
+            </div>
           </fieldset>
 
           <hr class="form-line">
@@ -459,8 +461,8 @@
 
   <template id="buy-and-bookmark">
     <div class="image-to-buy">
-      <button type="button" class="buy-prod" aria-label="Добавить товар в корзину">купить</button>
-      <button type="button" class="bookmark-prod" aria-label="Добавить товар в закладки">в закладки</button>
+      <button type="button" class="buy-prod" aria-label="Добавить товар в корзину" tabindex="-1">купить</button>
+      <button type="button" class="bookmark-prod" aria-label="Добавить товар в закладки" tabindex="-1">в закладки</button>
     </div>
   </template>
 

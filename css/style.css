@@ -552,7 +552,6 @@
 .user-name {
     background-color: var(--basic-white);
     color: var(--basic-black);
-    /* min-height: 45px; */
     font-size: 21px;
     line-height: 21px;
     padding: 12px 57px 12px 0;
@@ -566,7 +565,6 @@
 }
 
 .login-reg {
-    /* height: 45px; */
     width: 281px;
     box-sizing: border-box;
     display: flex;
@@ -741,9 +739,6 @@
     min-height: 409px;
     display: grid;
     grid-auto-columns: 1fr 1fr 1fr;
-    /* grid-auto-rows: 1fr 1fr 1fr; */
-    /* grid-auto-rows: auto auto auto; */
-
     gap: 20px;
     margin-bottom: 59px;
 }
@@ -782,8 +777,6 @@
     padding: 0;
     cursor: pointer;
 }
-
-
 
 .slider-arrow-left{
     left: 24.5px; 
@@ -833,7 +826,6 @@
     display: flex;
     bottom: 36px;
     left: 47.85%; /*pp*/
-    /* right: 50%; */
     margin: 0;
 }
 
@@ -863,7 +855,6 @@
     padding: 20px 0 22px 23px;
     box-sizing: border-box;
     width: 300px;
-    /* min-height: 123px; */
     position: relative;
 }
 
@@ -990,7 +981,6 @@
     position: relative; 
 }
 
-
 .products-item:hover {
     box-shadow: 0px 4px 20px var(--black-opacity-15);
 }
@@ -1031,7 +1021,6 @@
     margin: 0;
     padding-top: 11px;;
 }
-
 
 .product-pricez {
     color: var(--basic-white);
@@ -1303,7 +1292,6 @@
 
 /* footer */
 
-
 .main-footer {
     display: grid;
     grid-template-rows: auto 107px;
@@ -1504,7 +1492,6 @@
 }
   
 
-
 /* CATALOG */
 
 .grid-content-catalog {
@@ -1527,7 +1514,6 @@
     row-gap: 18px;
     margin: 0;
 }
-
 
 /* breadcrumbs */
 
@@ -1593,7 +1579,7 @@
 }
 
 
-/* filtres */
+/* filtr */
 
 .grid-content-catalog ul {
     padding-left: 0;
@@ -1776,7 +1762,6 @@
 
 .filter-checkbox:hover + label::before {
     opacity: 1;
-    /* outline: 4px solid #666; */
 }
 
 .filter-checkbox:focus + label::before,
@@ -1949,7 +1934,6 @@
     flex-wrap: wrap;
     padding-left: 0;
     margin: 0 0 54px;
-    
 }
 
 .pages-item {
@@ -1969,7 +1953,6 @@
     background-color: var(--basic-red);
     color: var(--basic-white);
     border-color: var(--basic-red);
-
 }
 
 .pages-item-next {
@@ -2027,7 +2010,6 @@
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
-
 }
 
 /* modals */
@@ -2096,17 +2078,15 @@
 .modal-login {
     height: 430px;
     box-sizing: border-box;
-    
     box-shadow: 0px 20px 40px var(--black-opacity-75);
-    
 }
+
 .modal-inputs-container {
     padding: 39px 80px 0;    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 
 .modal-login textarea {
     border: 2px solid var(--basic-gray);
@@ -2133,7 +2113,6 @@
     cursor: pointer;
 }
 
-
 /* modal-map */
 
 .modal-big-map {
@@ -2142,7 +2121,6 @@
     background-color: var(--basic-gray);
     box-shadow: 0px 0px 14.7px rgba(47, 42, 43, 0.5);
 }
-
 
 /* modal-added */
 
@@ -2300,7 +2278,6 @@
   }
 
 .open-animation {
-    /* display: flex; */
     animation: bounce .4s;
 }
 
