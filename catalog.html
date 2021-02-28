@@ -11,8 +11,8 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <link rel="stylesheet" href="css/normalize.css">
-  <!-- <link rel="stylesheet" href="css/pref-min-style.css"> -->
-  <link rel="stylesheet" href="css/prefics-style.css">
+  <link rel="stylesheet" href="css/pref-min-style.css">
+  <!-- <link rel="stylesheet" href="css/prefics-style.css"> -->
 
 </head>
 
@@ -30,7 +30,7 @@
           </a>
           <form method="get" action="https://echo.htmlacademy.ru" class="header-search">
             <input class="header-search-field" type="search" name="search" placeholder="Поиск:" />
-            <button class="header-search-button" type="submit"></button>
+            <button class="header-search-button" type="submit" aria-label="кнопка поиска"></button>
           </form>
 
           <a class="button-bookmark" href="#">
@@ -53,7 +53,7 @@
         строительных материалов <br />
         и инструментов для ремонта
       </p>
-      <a href="tel:+78125550555" class="main-phone">
+      <a href="tel:+78125550555" class="main-phone" aria-label="наш телефон - +7 812 555 05 55">
         +7 (812) 555-05-55
       </a>
       <p class="main-address">
@@ -62,7 +62,7 @@
       <div class="user-name">
         <a class="user-name-name" href="#" aria-label="страница пользователя">Равшан Джамшутович
 
-          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" class="user-name-img"
+          <svg aria-hidden="true" width="20" height="19" viewBox="0 0 20 19" fill="none" class="user-name-img"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M17.881 14.666C15.737 13.931 13.625 13 12.674 12.276C12.017 11.775 11.904 10.658 12.157 9.861C13.275 8.958 14.021 7.384 14.021 5.583C14.021 2.776 12.221 0.5 10 0.5C7.77902 0.5 5.97901 2.776 5.97901 5.583C5.97901 7.384 6.72501 8.957 7.84201 9.86C8.09501 10.658 7.98302 11.775 7.32502 12.276C6.37502 13 4.26201 13.93 2.11801 14.666C-0.0259852 15.402 1.48343e-05 18.5 1.48343e-05 18.5H20C20 18.5 20.025 15.401 17.881 14.666Z"
@@ -70,7 +70,7 @@
           </svg>
         </a>
         <a href="#" class="logout"  aria-label="разлогиниться">
-          <svg width="20" height="17" viewBox="0 0 20 17" fill="none" class="logout-img"
+          <svg aria-hidden="true" width="20" height="17" viewBox="0 0 20 17" fill="none" class="logout-img"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5" />
             <path
@@ -198,27 +198,27 @@
           <h2 class="subtitle-text sorting-text">СОРТИРОВКА</h2>
           <ul class="sort-by-list">
             <li>
-              <a class="sort-by-item sort-by-active">ПО ЦЕНЕ</a>
+              <a class="sort-by-item sort-by-active" aria-label="сортировать продукты по ЦЕНЕ">ПО ЦЕНЕ</a>
             </li>
             <li>
-              <a class="sort-by-item" href="#">ПО ТИПУ</a>
+              <a class="sort-by-item" href="#" aria-label="сортировать продукты по ТИПУ">ПО ТИПУ</a>
             </li>
             <li>
-              <a class="sort-by-item" href="#">ПО ФУНКЦИОНАЛУ</a>
+              <a class="sort-by-item" href="#" aria-label="сортировать продукты по ФУНКЦИОНАЛУ">ПО ФУНКЦИОНАЛУ</a>
             </li>
           </ul>
           <ul class="order-by-list">
             <li>
-              <a class="order-item" href="#" aria-label="сортровка по возрастанию">
-                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" class="triangle triangle-up triangle-active">
+              <a class="order-item" href="#" aria-label="сортировка товаров по возрастанию">
+                <svg aria-hidden="true" width="11" height="10" viewBox="0 0 11 10" fill="none" class="triangle triangle-up triangle-active">
                 <path d="M5.5,0 11,10 0,10" fill="#C5C5C5" />
               </svg>
     
               </a>
             </li>
             <li>
-              <a class="order-item" href="#" aria-label="сортровка по убывнию">
-                <svg class="triangle triangle-down" width="10" height="10" viewBox="0 0 10 10">
+              <a class="order-item" href="#" aria-label="сортировка товаров по убывнию">
+                <svg aria-hidden="true" class="triangle triangle-down" width="10" height="10" viewBox="0 0 10 10">
                   <path d="M0,0 11,0 5.5,10" fill="#C5C5C5" />
                 </svg>
               </a>
@@ -259,7 +259,7 @@
             </li>
             
             <li class="products-item" tabindex="0">
-              <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
+              <svg aria-hidden="true" class="new-conner" width="100" height="30" viewBox="0 0 100 30">
                 <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
               </svg>
               <div class="new-text">NEW</div>
@@ -278,7 +278,7 @@
             </li>
 
             <li class="products-item" tabindex="0">
-              <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
+              <svg aria-hidden="true" class="new-conner" width="100" height="30" viewBox="0 0 100 30">
                 <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
               </svg>
               <div class="new-text">NEW</div>
@@ -312,7 +312,7 @@
             </li>
 
             <li class="products-item" tabindex="0">
-              <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
+              <svg aria-hidden="true" class="new-conner" width="100" height="30" viewBox="0 0 100 30">
                 <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
               </svg>
               <div class="new-text">NEW</div>
@@ -331,7 +331,7 @@
             </li>
 
             <li class="products-item" tabindex="0">
-              <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
+              <svg aria-hidden="true" class="new-conner" width="100" height="30" viewBox="0 0 100 30">
                 <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
               </svg>
               <div class="new-text">NEW</div>
@@ -365,7 +365,7 @@
             </li>
 
             <li class="products-item" tabindex="0">
-              <svg class="new-conner" width="100" height="30" viewBox="0 0 100 30">
+              <svg aria-hidden="true" class="new-conner" width="100" height="30" viewBox="0 0 100 30">
                 <polygon points="33,0 67,0 100,33 0,33" fill="#EE3643" />
               </svg>
               <div class="new-text">NEW</div>
@@ -382,7 +382,7 @@
               <h3 class="header-card-23">Перфоратор BOSCH BFG 2000</h3>
               <p class="product-oldprice"></p>
               <p class="product-pricez">
-                <svg width="141" height="38" viewBox="0 0 141 38">
+                <svg aria-hidden="true" width="141" height="38" viewBox="0 0 141 38">
                   <polygon points="3,0 120,0 141,19 120,38 3,38" fill="#EE3643" />
                   <rect width="38" height="38" rx="3" fill="#EE3643" />
                 </svg>
@@ -397,10 +397,10 @@
     <section class="pages subtitle-text">
       <h2 class="visually-hidden">Страницы</h2>
       <ul class="pages-list">
-        <li><a class="pages-item pages-item-current">1</a></li>
-        <li><a class="pages-item" href="#">2</a></li>
-        <li><a class="pages-item" href="#">3</a></li>
-        <li><a class="pages-item pages-item-next" href="#">Следующая</a></li>
+        <li><a class="pages-item pages-item-current" aria-label="номер страницы товаров - 1">1</a></li>
+        <li><a class="pages-item" href="#" aria-label="номер страницы товаров - 2">2</a></li>
+        <li><a class="pages-item" href="#" aria-label="номер страницы товаров - 3">3</a></li>
+        <li><a class="pages-item pages-item-next" href="#" aria-label="номер страницы товаров - следующая">Следующая</a></li>
       </ul>
     </section>
 
@@ -442,7 +442,7 @@
           <div class="footer-address-phone">
             <p>
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-              <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+              <a class="footer-phone" href="tel:+78125550555" aria-label="наш телефон - +7 812 555 05 55">+7 (812) 555-05-55</a>
             </p>
           </div>
           <ul class="footer-secondary-navigation">
@@ -483,14 +483,14 @@
             <li class="web-contacts-item web-contacts-item1">
               <p>
                 Обратная связь:<br />
-                <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                <a href="mailto:mail@htmlacademy.ru" aria-label="наша почта: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </p>
             </li>
 
             <li class="web-contacts-item">
               <p>
                 Разработано -<br />
-                <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+                <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Разработано - htmlacademy.ru">htmlacademy.ru</a>
               </p>
             </li>
           </ul>
