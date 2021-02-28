@@ -248,59 +248,26 @@ const closeModalAdded = modalAdded.querySelector('.modal-close');
 const closeModalAdded2 = modalAdded.querySelector('.button-buy');
 const closeModalAdded3 = modalAdded.querySelector('.modal-button-continue');
 
-const templ = document.getElementById("buy-and-bookmark");
-const cards = document.querySelectorAll('.products-item');
 
-// счетчик для закладок
-function addTooBookmark(elem) {
-    const BookmarkPlus = elem.querySelector('.bookmark-prod');
-    BookmarkPlus.addEventListener('click', evt => {
-        evt.preventDefault();
-        counterBookmark++;
-        bookmarkNum.textContent = counterBookmark;
-        buttonBookmark.classList.add('header-something-inside')
-    })
-}
+const bookmarkProds = document.querySelectorAll('.bookmark-prod');
+bookmarkProds.forEach(bookmark => {
+  bookmark.addEventListener('click', () => {
+    counterBookmark++;
+    bookmarkNum.textContent = counterBookmark;
+    buttonBookmark.classList.add('header-something-inside')
+  })
+})
 
 
 // PRODUCT-CARDS
 
-function showButtons(elem) {
-  if (!elem.querySelector('.buy-prod')) {
-    const container = elem.querySelector('.product-item-container');
-    const img = container.querySelector('img');
-    img.style.display = 'none';
-    container.append(templ.content.cloneNode(true));
-    addTooCart(elem);
-    addTooBookmark(elem);
-  }
-}
-
-function hiddenButtons(elem) {
-  if (elem.querySelector('.buy-prod')) {
-    const container = elem.querySelector('.product-item-container');
-    const img = container.querySelector('img');
-    const revoveBlock = container.querySelector('.image-to-buy');
-    revoveBlock.remove();
-    img.style.display = 'block';
-  }
-}
-
-cards.forEach(card => {
-  card.addEventListener('mouseenter', () => showButtons(card));
-  card.addEventListener('mouseleave', () => hiddenButtons(card));
-  card.addEventListener('focus', () => showButtons(card));
-  card.addEventListener('blur', () => hiddenButtons(card));
+const addedButtons = document.querySelectorAll('.buy-prod');
+addedButtons.forEach(addedButton => {
+  openModal(modalAdded, addedButton);
+  closeModal(modalAdded, closeModalAdded);
+  closeModal(modalAdded, closeModalAdded2);
+  closeModal(modalAdded, closeModalAdded3);
 })
-
-// вешаем события на кнопку купить и на остальные 3 кнопки - закрыть.
-function addTooCart(elem) {
-    const addedButton = elem.querySelector('.buy-prod');
-    openModal(modalAdded, addedButton);
-    closeModal(modalAdded, closeModalAdded);
-    closeModal(modalAdded, closeModalAdded2);
-    closeModal(modalAdded, closeModalAdded3);
-}  
 
 
 // CATALOG-FILTER

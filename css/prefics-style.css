@@ -2531,3 +2531,25 @@
   -webkit-animation: shake 0.3s;
   animation: shake 0.3s;
 }
+
+
+
+
+.test {
+  background-color: black;
+  outline: 2px solid red;
+}
+
+.display-none {
+  display: none;
+}
+
+.products-item:hover img,
+.products-item:focus-within img{
+  display: none;
+}
+
+.products-item:hover .image-to-buy,
+.products-item:focus-within .image-to-buy {
+  display: block;
+}
