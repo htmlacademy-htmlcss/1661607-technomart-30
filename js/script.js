@@ -22,11 +22,11 @@ const sliderTextCurent = document.querySelector(".promo-slide-description");
 
 const sliderImgSrc = [
   "img/slides/slide-perforator.jpg",
-   "img/slides/slide-drill.jpg",
+  "img/slides/slide-drill.jpg",
   ];
 const sliderHeaders = [
   "ПЕРФОРАТОРЫ",
-   "ДРЕЛИ"
+  "ДРЕЛИ"
   ];
 const sliderTexts = [
   "Настоящие мужские игрушки", 
@@ -76,7 +76,7 @@ if (arrowRight && arrowLeft && dots) {
 }
 
 
-// services-slider
+// SERVICES-SLIDER
 
 const srviceTexts = [
   'Мы с удовольствием доставим ваш товар прямо <br />к вашему подъезду совершенно бесплатно!<br />Ведь мы неплохо заработаем, <br />поднимая его на ваш этаж!',
@@ -93,7 +93,7 @@ const services = document.querySelectorAll('.services-item');
 const headerService = document.querySelector('.service-description h3');
 const textService = document.querySelector('.service-description p');
 const serviceImg = document.querySelector('.service-img');
-const buttonCredit = document.querySelector('.button-credit');
+const buttonCredit = document.querySelector('.services-credit-button');
 
 const allDisactivate = () => {
   services.forEach(service => {
@@ -120,7 +120,7 @@ services.forEach((serv, i) => {
 })
 
 
-// modals
+// MODALS
 
 function openModal(modalForOpen, btnForOpen) {
   btnForOpen.addEventListener('click', evt => {
@@ -164,7 +164,6 @@ function closeModal(modalForClose, btnForClose) {
 }
 
 // modals animation and forms
-
 function letterSender(mL, name) {
   const mail = mL.querySelector('.login-email');
   const letter = mL.querySelector('.login-letter');
@@ -210,8 +209,20 @@ function letterSender(mL, name) {
   })
 }
 
-// login modal
+// убрать дерганье модального окна от скрола
+function getScrollWidth() {
+  const div = document.createElement('div');
+  div.style.overflowY = 'scroll';
+  div.style.width = '50px';
+  div.style.height = '50px';
+  div.style.visibility = 'hidden';
+  document.body.appendChild(div);
+  const scrollWidth = div.offsetWidth - div.clientWidth;
+  div.remove();
+  return scrollWidth;
+}
 
+// login modal
 const writeUs = document.getElementById('write-us');
 
 if (writeUs) {
@@ -223,7 +234,6 @@ if (writeUs) {
 }
 
 // map modal
-
 const modalMap = document.querySelector('.modal-map');
 
 if (modalMap) {
@@ -238,70 +248,53 @@ const closeModalAdded = modalAdded.querySelector('.modal-close');
 const closeModalAdded2 = modalAdded.querySelector('.button-buy');
 const closeModalAdded3 = modalAdded.querySelector('.modal-button-continue');
 
-const templ = document.getElementById("buy-and-bookmark");
-const cards = document.querySelectorAll('.products-item');
 
-
-// счетчик для закладок
-function addTooBookmark(elem) {
-    const BookmarkPlus = elem.querySelector('.bookmark-prod');
-    BookmarkPlus.addEventListener('click', evt => {
-        evt.preventDefault();
-        counterBookmark++;
-        bookmarkNum.textContent = counterBookmark;
-        buttonBookmark.classList.add('header-something-inside')
-
-    })
-}
-
-// обработчики для карточек продуктов
-function showButtons(elem) {
-  if (!elem.querySelector('.buy-prod')) {
-    const container = elem.querySelector('.product-item-container');
-    const img = container.querySelector('img');
-    img.style.display = 'none';
-    container.append(templ.content.cloneNode(true));
-    addTooCart(elem);
-    addTooBookmark(elem);
-  }
-}
-
-function hiddenButtons(elem) {
-  if (elem.querySelector('.buy-prod')) {
-    const container = elem.querySelector('.product-item-container');
-    const img = container.querySelector('img');
-    const revoveBlock = container.querySelector('.image-to-buy');
-    revoveBlock.remove();
-    img.style.display = 'block';
-  }
-}
-
-cards.forEach(card => {
-    card.addEventListener('mouseenter', () => showButtons(card));
-    card.addEventListener('mouseleave', () => hiddenButtons(card));
-    card.addEventListener('focus', () => showButtons(card));
-    card.addEventListener('blur', () => hiddenButtons(card));
+const bookmarkProds = document.querySelectorAll('.bookmark-prod');
+bookmarkProds.forEach(bookmark => {
+  bookmark.addEventListener('click', () => {
+    counterBookmark++;
+    bookmarkNum.textContent = counterBookmark;
+    buttonBookmark.classList.add('header-something-inside')
+  })
 })
 
-// вешаем события на кнопку купить и на остальные 3 кнопки - закрыть.
-function addTooCart(elem) {
-    const addedButton = elem.querySelector('.buy-prod');
-    openModal(modalAdded, addedButton);
-    closeModal(modalAdded, closeModalAdded);
-    closeModal(modalAdded, closeModalAdded2);
-    closeModal(modalAdded, closeModalAdded3);
-}  
 
-// убрать дерганье модального окна от скрола
-function getScrollWidth() {
-    const div = document.createElement('div');
-    div.style.overflowY = 'scroll';
-    div.style.width = '50px';
-    div.style.height = '50px';
-    div.style.visibility = 'hidden';
-    document.body.appendChild(div);
-    const scrollWidth = div.offsetWidth - div.clientWidth;
-    div.remove();
-    return scrollWidth;
-  }
+// PRODUCT-CARDS
 
+const addedButtons = document.querySelectorAll('.buy-prod');
+addedButtons.forEach(addedButton => {
+  openModal(modalAdded, addedButton);
+  closeModal(modalAdded, closeModalAdded);
+  closeModal(modalAdded, closeModalAdded2);
+  closeModal(modalAdded, closeModalAdded3);
+})
+
+
+// CATALOG-FILTER
+
+const rangeBlock = document.querySelector('.range');
+const MAX_PRICE = 35000;
+const BAR_WIDTH = 180;
+const TOGGLE_ZERO = 18;
+if (rangeBlock) {
+  const bar = rangeBlock.querySelector('.scale .bar');
+  const toggleMax = rangeBlock.querySelector('.toggle-max');
+  const toggleMin = rangeBlock.querySelector('.toggle-min');
+  const rangeNumbers = rangeBlock.querySelectorAll('.price-controls input');
+  rangeNumbers.forEach(num => {
+    num.addEventListener('input', () => {
+      num.value = num.value.replace(/\D/g, '');
+      if (num.value > MAX_PRICE) num.value = MAX_PRICE;
+      const maxProcent = +rangeNumbers[1].value / MAX_PRICE * 100;
+      const maxPix = +rangeNumbers[1].value / MAX_PRICE * BAR_WIDTH;
+      const minProcent = +rangeNumbers[0].value / MAX_PRICE * 100;
+      const minPix = +rangeNumbers[0].value / MAX_PRICE * BAR_WIDTH;
+      toggleMax.style.left = TOGGLE_ZERO +  maxPix + 'px';
+      bar.style.width = maxProcent - minProcent + '%';
+      toggleMin.style.left = TOGGLE_ZERO + minPix + 'px';
+      bar.style.marginLeft = minProcent / 100 * BAR_WIDTH + 'px';
+
+      // драг энд дроп пока не очень, так что на этом все
+     })
+  })
+}
