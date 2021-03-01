@@ -157,7 +157,6 @@ function closeModal(modalForClose, btnForClose) {
 
   window.addEventListener('keydown', (evt) => {
     if (evt.keyCode == 27) {
-      evt.preventDefault();
       closer();
     } 
   })
