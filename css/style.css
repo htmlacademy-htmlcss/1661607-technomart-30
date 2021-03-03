@@ -212,7 +212,8 @@
   font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
   text-transform: uppercase;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   min-height: 38px;
   width: 192px;
   text-align: center;
@@ -568,7 +569,6 @@
   justify-self: end;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  display: inline-block;
   min-height: 45px;
 }
 
@@ -600,12 +600,13 @@
 .user-name-img,
 .logout {
   position: absolute;
-  bottom: 14px;
-  height: 18px;
+  bottom: 12px;
+  height: 19px;
 }
 
 .user-name-img {
-  left: 15px;
+  left: 16px;
+  bottom: 14px;
 }
 
 .logout {
@@ -652,20 +653,17 @@
   grid-column: 3 / 4;
   justify-self: center;
   padding-top: 7px;
-  padding-left: 10px;
+  padding-left: 11.5px;
 }
 
 .dot-cabinet {
   display: inline-block;
+  vertical-align: middle;
   width: 4px;
   height: 4px;
   background-color: var(--basic-black);
   border-radius: 50%;
-  margin: 6px 10px 2px;
-}
-
-.dot-cabinet:hover {
-  background-color: var(--basic-red);
+  margin: 0 10px;
 }
 
 .header-login-reg a {
@@ -1540,6 +1538,7 @@
 
 .social-button-vk {
   background-image: url("../img/social/icon-vk.svg");
+  background-size: 27px 15px;
 }
 
 .social-button-fb {
@@ -1971,7 +1970,6 @@
 }
 
 .sort-by-item {
-  display: inline-block;
   border: none;
   border-bottom: 1px dotted var(--basic-red);
   color: var(--basic-black);
