@@ -2299,14 +2299,13 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  border: none;
-  cursor: pointer;
   margin-bottom: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 2px;
 }
 
 .buy-prod {
@@ -2315,7 +2314,6 @@
   -webkit-box-shadow: inset 0 -3px 0 #367315;
   box-shadow: inset 0 -3px 0 #367315;
   color: var(--basic-white);
-  border-radius: 2px;
   position: relative;
 }
 
@@ -2333,6 +2331,13 @@
 
 /* HOVER - ACTIVE - FOCUS:  box-shadow / outline*/
 
+.buy-prod:focus,
+.bookmark-prod:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--basic-dark);
+}
+
+
 .buy-prod:hover {
   background-color: var(--basic-green-success);
 }
@@ -2340,6 +2345,8 @@
 .buy-prod:active {
   border: none;
   background-color: var(--green-dark2);
+  -webkit-box-shadow: none;
+  box-shadow: none;
   outline: none;
 }
 
@@ -2356,6 +2363,8 @@
 .bookmark-prod:active {
   border-color: var(--basic-dark-opacity);
   color: var(--basic-dark-opacity);
+  -webkit-box-shadow: none;
+  box-shadow: none;
   outline: none;
 }
 
@@ -2431,13 +2440,16 @@
   outline: none;
 }
 
+.user-name-name:active,
+.logout:active,
 .pages-item:active,
 .social-button:active,
 .footer-nav-item a:active,
 .services-item:active,
 .products-item:active,
 .firms-item a:active,
-.breadcrumbs-item:last-child a:hover {
+.breadcrumbs-item:last-child a:hover,
+.breadcrumbs-item a:active {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;

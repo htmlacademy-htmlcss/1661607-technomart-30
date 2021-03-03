@@ -250,7 +250,8 @@ const closeModalAdded3 = modalAdded.querySelector('.modal-button-continue');
 
 const bookmarkProds = document.querySelectorAll('.bookmark-prod');
 bookmarkProds.forEach(bookmark => {
-  bookmark.addEventListener('click', () => {
+  bookmark.addEventListener('click', (evt) => {
+    evt.preventDefault()
     counterBookmark++;
     bookmarkNum.textContent = counterBookmark;
     buttonBookmark.classList.add('header-something-inside')
