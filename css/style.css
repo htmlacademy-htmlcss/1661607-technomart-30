@@ -1528,7 +1528,7 @@
 }
 
 .social-button {
-  display: inline-block;
+  display: block;
   height: 41px;
   width: 41px;
   border-radius: 50%;
