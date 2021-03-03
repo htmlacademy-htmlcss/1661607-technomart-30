@@ -1018,6 +1018,10 @@
   position: relative;
 }
 
+.image-to-buy {
+  margin: 0 4px 3px 0;
+}
+
 .products-item:hover {
   -webkit-box-shadow: 0 4px 20px var(--black-opacity-15);
   box-shadow: 0 4px 20px var(--black-opacity-15);
@@ -1854,7 +1858,7 @@
 }
 
 .filter-checkbox:disabled + label::before {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .filter-checkbox:checked + label::before {
@@ -1912,7 +1916,8 @@
 
 .filter-radio:disabled + label::before,
 .filter-radio:disabled + label::after {
-  opacity: 1;
+  opacity: 0.3;
+
 }
 
 .filter-button:hover {
@@ -2568,10 +2573,3 @@
   display: block;
 }
 
-.image-to-buy {
-  margin: 0 4px 3px 0;
-}
-
-/* .container > * {
-  width: 940px;
-} */
